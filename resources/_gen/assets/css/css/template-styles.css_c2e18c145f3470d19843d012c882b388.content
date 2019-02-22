@@ -55,11 +55,9 @@ abbr {
     cursor: help;
     border-bottom: 1px dashed;
 }
-/*     max-height: 75vh; */
-
 img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 50vh;
 }
 .img-link {
     border-bottom: none;
@@ -248,23 +246,16 @@ label {
 }
 
 /* Tables */
-/* modified by KLD*/
-
 table {
     text-align: left;
-    width: 50%;
-    color: red;
-    border: none;
-    border-spacing: 0;
-    color: black;
-    font-size: 11px;
-    table-layout: auto;
+    table-layout: fixed;
+    width: 100%;
     border-collapse: collapse;
 }
 th,
 td {
     border: 2px solid;
-    padding: 0.25rem;
+    padding: 0.5rem;
     line-height: 1.25;
     margin: 0;
 }
