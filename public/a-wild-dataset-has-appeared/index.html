@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="canonical" href="https://kldavenport.com/a-wild-dataset-has-appeared/">
+  <link rel="canonical" href="https://kldavenport.netlify.com/a-wild-dataset-has-appeared/">
 
   
 
@@ -18,11 +18,11 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://kldavenport.com/css/prism.css" media="none" onload="this.media='all';">
+  <link rel="stylesheet" href="https://kldavenport.netlify.com/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://kldavenport.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://kldavenport.netlify.com/css/styles.css">
 
   <style id="inverter" media="none">
     html { filter: invert(100%) }
@@ -131,7 +131,7 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="Kevin Davenport Engineering &amp; ML blog home page">
-        <img src="https://kldavenport.com/images/logo.svg" alt="">
+        <img src="https://kldavenport.netlify.com/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
         
@@ -240,28 +240,28 @@
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/data-science">data science</a>
+              <a href="https://kldavenport.netlify.com/tags/data-science">data science</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/data-exploration">data exploration</a>
+              <a href="https://kldavenport.netlify.com/tags/data-exploration">data exploration</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/data-engineering">data engineering</a>
+              <a href="https://kldavenport.netlify.com/tags/data-engineering">data engineering</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/correlation">correlation</a>
+              <a href="https://kldavenport.netlify.com/tags/correlation">correlation</a>
             </li>
           
         </ul>
@@ -322,27 +322,7 @@
 
 <p>I tend to start with the simplest, most interpretable models first, regardless if the problem requires classification, regression, or causality modeling. This allows me to assess how difficult the problem is before wasting time applying a complex solution.</p>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/a-wild-dataset-has-appeared/image0.gif" class="img-link">
-    <img src="https://kldavenport.com/a-wild-dataset-has-appeared/image0_huf83b922fd10c40e79227c9f9d133e04c_32851_700x0_resize_box.gif">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image0.gif" alt="gif" /></p>
 
 <p>The IPython notebook below will outline exploratory analysis in terms of 1) Histograms and Aggregation, 2) Correlation Structure , 3) Dimensional Reduction. Note this isn’t meant to be an exhaustive effort to enumerate all types of imputation and pre-processing, but a quick examination of some best practices.</p>
 
@@ -458,54 +438,16 @@ Name: 1, dtype: object
 g.map(sns.distplot, &quot;age&quot;)
 </code></pre>
 
+<p><img src="image1.png" alt="png" /></p>
 
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/a-wild-dataset-has-appeared/image1.png" class="img-link">
-    <img src="https://kldavenport.com/a-wild-dataset-has-appeared/image1_hue62bb5341ab596433d7357f8ecff396a_27735_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p>options=&ldquo;700x&rdquo; &gt;}}</p>
 
 <p>Taking a look at the distribution of the ages in the dataset, it looks probably there wasn&rsquo;t a concerted effort to target a specific age class. The plot of the general workforce population might be similar.</p>
 
 <pre><code class="language-python">data.age.hist(alpha=.6)
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/a-wild-dataset-has-appeared/image2.png" class="img-link">
-    <img src="https://kldavenport.com/a-wild-dataset-has-appeared/image2_hu8bd8739614d451270fa805630cfc0090_5385_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image2.png" alt="png" /></p>
 
 <h2 id="feature-target-distributions">Feature-Target Distributions</h2>
 
@@ -517,27 +459,7 @@ sns.kdeplot(data.query(&quot;y == 'yes'&quot;).age, shade=True, alpha=.2, label=
 plt.show()
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/a-wild-dataset-has-appeared/image3.png" class="img-link">
-    <img src="https://kldavenport.com/a-wild-dataset-has-appeared/image3_hu780597a46320c2c2e9a0a1964c0a8860_16746_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image3.png" alt="png" /></p>
 
 <p>Let&rsquo;s examine our outcome variable pivoted by poutcome which describes the outcome of the previous marketing campaign/contact (&lsquo;failure&rsquo;,&lsquo;nonexistent&rsquo;,&lsquo;success&rsquo;).</p>
 
@@ -723,27 +645,7 @@ dtype: float64
 plt.xticks(rotation='vertical')
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/a-wild-dataset-has-appeared/image4.png" class="img-link">
-    <img src="https://kldavenport.com/a-wild-dataset-has-appeared/image4_hu8adef30654b3be1da675188b910ee696_11879_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image4.png" alt="png" /></p>
 
 <h3 id="numeric-correlation">Numeric Correlation</h3>
 
@@ -792,27 +694,7 @@ plt.scatter(Y[:, 0], Y[:, 1], c=y, cmap=plt.cm.Set3,s=30,alpha=.8)
 # plt.axis('tight')
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/a-wild-dataset-has-appeared/image5.png" class="img-link">
-    <img src="https://kldavenport.com/a-wild-dataset-has-appeared/image5_hua60e8c4a8a6a92f9344897a5c8a18427_72739_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image5.png" alt="png" /></p>
 
 <p>I haven&rsquo;t used T-SNE in any meaningful way for years, but some key things to note are if we get a representation where regions overlap less compared to a standard post 2-dimension PCA plot. This might suggest that this dataset can be separated more effectively by non-linear methods that may focus on the local structure. We might find that 2-dimensions isn&rsquo;t enough to accurately represent the internal structure of the data (we might want to look at some 3-D plots).</p>
 
@@ -832,15 +714,15 @@ plt.scatter(Y[:, 0], Y[:, 1], c=y, cmap=plt.cm.Set3,s=30,alpha=.8)
     </label>
   </div>
   
-    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://aws.amazon.com/s3/">AWS S3</a>.
+    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://app.netlify.com/">Netlify</a>. Source on <a href="https://github.com/kevindavenport/kldavenport.com">Github</a>.
   
 </footer>
 
         </div>
       </div>
     </div>
-    <script src="https://kldavenport.com/js/prism.js"></script>
-<script src="https://kldavenport.com/js/dom-scripts.js"></script>
+    <script src="https://kldavenport.netlify.com/js/prism.js"></script>
+<script src="https://kldavenport.netlify.com/js/dom-scripts.js"></script>
 
     
   

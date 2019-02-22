@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="canonical" href="https://kldavenport.com/complexity-computability-part1/">
+  <link rel="canonical" href="https://kldavenport.netlify.com/complexity-computability-part1/">
 
   
 
@@ -18,11 +18,11 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://kldavenport.com/css/prism.css" media="none" onload="this.media='all';">
+  <link rel="stylesheet" href="https://kldavenport.netlify.com/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://kldavenport.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://kldavenport.netlify.com/css/styles.css">
 
   <style id="inverter" media="none">
     html { filter: invert(100%) }
@@ -131,7 +131,7 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="Kevin Davenport Engineering &amp; ML blog home page">
-        <img src="https://kldavenport.com/images/logo.svg" alt="">
+        <img src="https://kldavenport.netlify.com/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
         
@@ -240,14 +240,14 @@
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/algorithms">algorithms</a>
+              <a href="https://kldavenport.netlify.com/tags/algorithms">algorithms</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/big-o">big-o</a>
+              <a href="https://kldavenport.netlify.com/tags/big-o">big-o</a>
             </li>
           
         </ul>
@@ -300,27 +300,7 @@
 
 <p>In this series of posts we’ll cover important concepts from computability theory; techniques for designing efficient algorithms for combinatorial, algebraic, and (if I can learn enough about it), number-theoretic problems. It’ll serve as a compact way to familiarize ourselves with basic concepts such as NP-Completeness from computational complexity theory, through Python.</p>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/complexity-computability-part1/image0.png" class="img-link">
-    <img src="https://kldavenport.com/complexity-computability-part1/image0_hud2b9c3940f853568841088b0b7bc8184_75798_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image0.png" alt="png" /></p>
 
 <p>The only pre-requisite is that you know what Big-O notation is conceptually, even if you don’t have a good intuition for why certain algorithms are one complexity versus another. Basically know that it is a relative representation of the complexity of an algorithm. More specifically, the order of growth in the time of execution depending on the length of the input.</p>
 
@@ -459,27 +439,7 @@ sns.regplot(x='dict_size', y='run_time', data=dict_results_df);
 
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/complexity-computability-part1/image1.png" class="img-link">
-    <img src="https://kldavenport.com/complexity-computability-part1/image1_hu1f16df5b769e308774cbb00ee5b5c688_17240_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image1.png" alt="png" /></p>
 
 <h1 id="linear-time-o-n">Linear time O(N)</h1>
 
@@ -523,27 +483,7 @@ sns.regplot(x='array_size', y='run_time', data=zeros_results_df,
             x_bins=20,scatter_kws={&quot;alpha&quot;:1},line_kws={&quot;alpha&quot;:0.5});
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/complexity-computability-part1/image2.png" class="img-link">
-    <img src="https://kldavenport.com/complexity-computability-part1/image2_hu8451505369f2666f6eaa103b88229036_21555_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image2.png" alt="png" /></p>
 
 <p>This makes me curious if numpy.empty is any faster as it should only be allocating memory, this becomming O(1). Speed differences can be attributed to <a href="https://stackoverflow.com/questions/27464039/why-the-performance-difference-between-numpy-zeros-and-numpy-zeros-like">malloc+memset being slower than calloc in the underlying C implementation</a></p>
 
@@ -556,27 +496,7 @@ sns.regplot(x='array_size', y='run_time', data=empty_results_df,color=&quot;seag
 
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/complexity-computability-part1/image3.png" class="img-link">
-    <img src="https://kldavenport.com/complexity-computability-part1/image3_hu5fc65792f43eda9f9f4d608078e2666c_20484_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image3.png" alt="png" /></p>
 
 <h1 id="o-n-sup-2-sup-quadratic-time">O(N<sup>2</sup>) Quadratic Time</h1>
 
@@ -608,27 +528,7 @@ sns.regplot(x='array_size', y='run_time', data=x,
            lowess = True)
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/complexity-computability-part1/image4.png" class="img-link">
-    <img src="https://kldavenport.com/complexity-computability-part1/image4_huec7e16f1dcfb1679098a8ae2f216a6c4_19941_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image4.png" alt="png" /></p>
 
 <h1 id="o-c-sup-n-sup-where-i-c-1-i-exponential-time">O(c<sup>N</sup>) where <i>c&gt;1</i> Exponential Time</h1>
 
@@ -646,15 +546,15 @@ sns.regplot(x='array_size', y='run_time', data=x,
     </label>
   </div>
   
-    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://aws.amazon.com/s3/">AWS S3</a>.
+    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://app.netlify.com/">Netlify</a>. Source on <a href="https://github.com/kevindavenport/kldavenport.com">Github</a>.
   
 </footer>
 
         </div>
       </div>
     </div>
-    <script src="https://kldavenport.com/js/prism.js"></script>
-<script src="https://kldavenport.com/js/dom-scripts.js"></script>
+    <script src="https://kldavenport.netlify.com/js/prism.js"></script>
+<script src="https://kldavenport.netlify.com/js/dom-scripts.js"></script>
 
     
   

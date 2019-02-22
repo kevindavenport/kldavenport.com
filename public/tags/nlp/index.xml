@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nlp on Kevin Davenport Engineering &amp; ML blog</title>
-    <link>https://kldavenport.com/tags/nlp/</link>
+    <link>https://kldavenport.netlify.com/tags/nlp/</link>
     <description>Recent content in Nlp on Kevin Davenport Engineering &amp; ML blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Mar 2017 11:54:26 -0800</lastBuildDate>
     
-	<atom:link href="https://kldavenport.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kldavenport.netlify.com/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Topic Modeling Amazon Product Reviews</title>
-      <link>https://kldavenport.com/topic-modeling-amazon-reviews/</link>
+      <link>https://kldavenport.netlify.com/topic-modeling-amazon-reviews/</link>
       <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/topic-modeling-amazon-reviews/</guid>
+      <guid>https://kldavenport.netlify.com/topic-modeling-amazon-reviews/</guid>
       <description>I found Professor Julian McAuley’s work at UCSD when I was searching for academic work identifying the ontology and utility of products on Amazon. Professor McAuley and his students have accomplished impressive work inferring networks of substitutable and complementary items. They constructed a browseable product graph of related products and discovered topics or ‘microcategories’ that are associated with product relationships to infer networks of substitutable and complementary products. Much of this work utilizes topic modeling, and as I’ve never applied it in academia or work, this blog will be a practical intro to Latent Dirichlet Allocation (LDA) through code.</description>
     </item>
     

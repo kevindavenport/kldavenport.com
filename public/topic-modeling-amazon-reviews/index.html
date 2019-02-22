@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="canonical" href="https://kldavenport.com/topic-modeling-amazon-reviews/">
+  <link rel="canonical" href="https://kldavenport.netlify.com/topic-modeling-amazon-reviews/">
 
   
 
@@ -18,11 +18,11 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://kldavenport.com/css/prism.css" media="none" onload="this.media='all';">
+  <link rel="stylesheet" href="https://kldavenport.netlify.com/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://kldavenport.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://kldavenport.netlify.com/css/styles.css">
 
   <style id="inverter" media="none">
     html { filter: invert(100%) }
@@ -131,7 +131,7 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="Kevin Davenport Engineering &amp; ML blog home page">
-        <img src="https://kldavenport.com/images/logo.svg" alt="">
+        <img src="https://kldavenport.netlify.com/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
         
@@ -240,28 +240,28 @@
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/lda">LDA</a>
+              <a href="https://kldavenport.netlify.com/tags/lda">LDA</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/nlp">NLP</a>
+              <a href="https://kldavenport.netlify.com/tags/nlp">NLP</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/nlu">NLU</a>
+              <a href="https://kldavenport.netlify.com/tags/nlu">NLU</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/topic-modeling">Topic Modeling</a>
+              <a href="https://kldavenport.netlify.com/tags/topic-modeling">Topic Modeling</a>
             </li>
           
         </ul>
@@ -359,27 +359,7 @@
 <li>It is easy to use for exploratory analysis</li>
 </ul>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/topic-modeling-amazon-reviews/image0.png" class="img-link">
-    <img src="https://kldavenport.com/topic-modeling-amazon-reviews/image0_hud4f59a128f304dfa1496b3cd9388096b_270676_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image0.png" alt="png" /></p>
 
 <p>We’ll be using a subset <code>(reviews_Automotive_5.json.gz)</code> of the 142.8 million reviews spanning May 1996 – July 2014 that Julian and his team have compiled and provided in a very convenient manner on their site.</p>
 
@@ -423,27 +403,7 @@ df = getDF('reviews_Automotive_5.json.gz')
 df.head()
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/topic-modeling-amazon-reviews/table1.png" class="img-link">
-    <img src="https://kldavenport.com/topic-modeling-amazon-reviews/table1_hu60c59b75efd61695a665e622395b307b_146018_1000x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="table1.png" alt="png" /></p>
 
 <pre><code class="language-python">df['reviewText'][0]
 </code></pre>
@@ -482,27 +442,7 @@ memory usage: 1.6+ MB
 
 <p>We have many ways to segment our document into its atomic elements. To start we&rsquo;ll tokenize the document into words. For this instance we&rsquo;ll use NLTK’s tokenize.regexp module. You can see how this works in a fun interactive way here: try &lsquo;w+&rsquo; at <a href="http://regexr.com/:">http://regexr.com/:</a></p>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/topic-modeling-amazon-reviews/image1.gif" class="img-link">
-    <img src="https://kldavenport.com/topic-modeling-amazon-reviews/image1_hu0a8f0475f8f8d9b62e9c2d27d90c3844_55208_1000x0_resize_box.gif">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image1.gif" alt="gif" /></p>
 
 <pre><code class="language-python">tokenizer = RegexpTokenizer(r'\w+')
 </code></pre>
@@ -675,27 +615,7 @@ gensim.corpora.MmCorpus.serialize('amzn_auto_review.mm', corpus)
 <p>As a topic modeling newbie this part is unsatisfying to me. In this unsupervised learning application I can see how a lot of people would arbitrarily set a number of topics, similar to centroids in k-means clustering, and then have a human evaluate if the topics &ldquo;make sense&rdquo;. You can go very deep very quickly by researching this online. For now let&rsquo;s plead ignorance and go through with a simple model FULL of assumptions :)</p>
 
 <p>Training an LDA model using our BOW corpus as training data:
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/topic-modeling-amazon-reviews/image2.jpeg" class="img-link">
-    <img src="https://kldavenport.com/topic-modeling-amazon-reviews/image2_hua0d4d4b24f4da3a102e4452ac738b95f_128865_900x0_resize_q75_box.jpeg">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-</p>
+<img src="image2.jpeg" alt="jpeg" /></p>
 
 <p>The number of topics is arbitrary, I&rsquo;ll use the browse taxonomy visible off <a href="https://www.amazon.com/automotive">https://www.amazon.com/automotive</a> to inform the number we choose:</p>
 
@@ -814,15 +734,15 @@ a
     </label>
   </div>
   
-    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://aws.amazon.com/s3/">AWS S3</a>.
+    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://app.netlify.com/">Netlify</a>. Source on <a href="https://github.com/kevindavenport/kldavenport.com">Github</a>.
   
 </footer>
 
         </div>
       </div>
     </div>
-    <script src="https://kldavenport.com/js/prism.js"></script>
-<script src="https://kldavenport.com/js/dom-scripts.js"></script>
+    <script src="https://kldavenport.netlify.com/js/prism.js"></script>
+<script src="https://kldavenport.netlify.com/js/dom-scripts.js"></script>
 
     
   

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.54.0" />
-  <link rel="canonical" href="https://kldavenport.com/lending-club-python/">
+  <link rel="canonical" href="https://kldavenport.netlify.com/lending-club-python/">
 
   
 
@@ -18,11 +18,11 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://kldavenport.com/css/prism.css" media="none" onload="this.media='all';">
+  <link rel="stylesheet" href="https://kldavenport.netlify.com/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://kldavenport.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://kldavenport.netlify.com/css/styles.css">
 
   <style id="inverter" media="none">
     html { filter: invert(100%) }
@@ -131,7 +131,7 @@
   <div>
     <div class="intro">
       <a class="logo" href="/" aria-label="Kevin Davenport Engineering &amp; ML blog home page">
-        <img src="https://kldavenport.com/images/logo.svg" alt="">
+        <img src="https://kldavenport.netlify.com/images/logo.svg" alt="">
       </a>
       <p class="library-desc">
         
@@ -240,49 +240,49 @@
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/finance">finance</a>
+              <a href="https://kldavenport.netlify.com/tags/finance">finance</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/gradient-boosting">gradient boosting</a>
+              <a href="https://kldavenport.netlify.com/tags/gradient-boosting">gradient boosting</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/decision-trees">decision trees</a>
+              <a href="https://kldavenport.netlify.com/tags/decision-trees">decision trees</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/data-science">data science</a>
+              <a href="https://kldavenport.netlify.com/tags/data-science">data science</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/data-exploration">data exploration</a>
+              <a href="https://kldavenport.netlify.com/tags/data-exploration">data exploration</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/data-engineering">data engineering</a>
+              <a href="https://kldavenport.netlify.com/tags/data-engineering">data engineering</a>
             </li>
           
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="https://kldavenport.com/tags/correlation">correlation</a>
+              <a href="https://kldavenport.netlify.com/tags/correlation">correlation</a>
             </li>
           
         </ul>
@@ -409,27 +409,7 @@
 
 <p><a href="https://www.lendingclub.com">Lending Club</a> is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.</p>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image0.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image0_hu4a4706a7753b1a91bbc9e8f02ca1a784_605583_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image0.png" alt="png" /></p>
 
 <p>We&rsquo;ll download the 2013-2014 data and uncompress it from inside our notebook by invoking the command line (I didn&rsquo;t feel like installing wget on OSX but at least we have curl:</p>
 
@@ -562,27 +542,7 @@ memory usage: 102.5+ MB
 <pre><code class="language-python">df.head(3)
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image1.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image1_hued14da6d26ed82851f9fe0e5f32dd052_73935_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image1.png" alt="png" /></p>
 
 <h2 id="keeping-what-we-need">Keeping what we need</h2>
 
@@ -689,27 +649,7 @@ dtype: int64</code></p>
 <pre><code class="language-python">df.ix[:5,8:15]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image2.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image2_hubd59b41f946f21b19c9236e2a8c250bf_100852_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image2.png" alt="png" /></p>
 
 <h2 id="employment-title">Employment Title</h2>
 
@@ -810,27 +750,7 @@ Late (16-30 days)        824
 Default                   76
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image3.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image3_huee3d6e350326663284bc260ba8ba7a7a_25153_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image3.png" alt="png" /></p>
 
 <h2 id="arbitrary-applicant-input">Arbitrary Applicant Input</h2>
 
@@ -839,27 +759,7 @@ Default                   76
 <pre><code class="language-python">df.ix[:5,12:21]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image4.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image4_hud69ffffbadb69b0a3d8f9db88b0e1544_111678_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image4.png" alt="png" /></p>
 
 <pre><code class="language-python">print df.purpose.value_counts()
 print ''
@@ -901,27 +801,7 @@ Bills Bills Bills                 1
 <pre><code class="language-python">df.ix[:5,17:25]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image5.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image5_hufb12ef88525b79cd68b2b4f886a88766_66761_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image5.png" alt="png" /></p>
 
 <h2 id="delinquency">Delinquency</h2>
 
@@ -1051,27 +931,7 @@ df.drop(['fico_range_low','fico_range_high','initial_list_status'],1, inplace=Tr
 <pre><code class="language-python">df.ix[:5,23:32]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image6.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image6_hu96ce1be992eac3ec208817275e66e421_68299_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image6.png" alt="png" /></p>
 
 <h2 id="revolving-utility">Revolving Utility</h2>
 
@@ -1081,27 +941,7 @@ df.drop(['fico_range_low','fico_range_high','initial_list_status'],1, inplace=Tr
 df.ix[:5,23:32]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image7.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image7_hu96ce1be992eac3ec208817275e66e421_68299_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image7.png" alt="png" /></p>
 
 <h2 id="more-post-loan-attributes">More Post Loan Attributes</h2>
 
@@ -1113,27 +953,7 @@ df.ix[:5,23:32]
 df.ix[:5,23:32]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image9.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image9_hu5646c71e01eea1a3ec28924f5b9abb9e_75055_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image8.png" alt="png" /></p>
 
 <pre><code class="language-python">df.drop(['total_rec_int','total_rec_late_fee',
          'recoveries','collection_recovery_fee',
@@ -1142,27 +962,7 @@ df.ix[:5,23:32]
 df.ix[:5,23:32]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image10.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image10_hu35dd8442e903c63782226a5aab087c28_81069_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image10.png" alt="png" /></p>
 
 <pre><code class="language-python">df.drop(['last_pymnt_d','last_pymnt_amnt',
          'next_pymnt_d','last_credit_pull_d'],1, inplace=True)
@@ -1170,27 +970,7 @@ df.ix[:5,23:32]
 df.ix[:5,23:32]
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image11.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image11_hu92d1cc28a6d91712cea23839c2c21c18_71039_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image11.png" alt="png" /></p>
 
 <h2 id="last-fico-ranges">Last FICO Ranges</h2>
 
@@ -1328,27 +1108,7 @@ g.set(xlim=(2.5, 28),ylim=(580, 880),alpha = .5)
 g.savefig('1.png',transparent=True)
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image0.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image0_hu4a4706a7753b1a91bbc9e8f02ca1a784_605583_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image0.png" alt="png" /></p>
 
 <pre><code class="language-python">y = df.int_rate.values
 df.drop('int_rate',axis = 1, inplace=True)
@@ -1369,27 +1129,7 @@ np.unique(y), pd.Series(y).plot(kind='hist',alpha=.7, bins=20, title='Interest R
          24.5 ,  24.99,  25.57,  25.8 ,  25.83,  25.89,  25.99,  26.06]),
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image12.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image12_hu0c593044b2b00d33ab063d7b07c5d47e_17524_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image12.png" alt="png" /></p>
 
 <p>We&rsquo;re about to blow up the feature space by dummy-encoding our categorical variables! This will make our dataframe 8x bgger in memory going from 60 to 470MB.</p>
 
@@ -1526,27 +1266,7 @@ plt.yticks(np.arange(10 + 0.25), np.array(df.columns)[indices])
 _ = plt.xlabel('Relative importance'), plt.title('Top Ten Important Variables')
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image13.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image13_hu30209df21ca8ba8b8349110c92140a12_26707_700x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image13.png" alt="png" /></p>
 
 <h2 id="partial-dependence-plots">Partial Dependence Plots</h2>
 
@@ -1563,27 +1283,7 @@ fig, axs = plot_partial_dependence(est, X_train, comp_features,
                                    figsize=(14, 14), n_jobs=4)
 </code></pre>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image14.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image14_hu7ecc170ccbba0d8a15418654b4e445ce_57008_1000x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image14.png" alt="png" /></p>
 
 <p>Trying out some alternate plots from seaborn.</p>
 
@@ -1595,27 +1295,7 @@ sns.jointplot(y,df.meanfico.values,annot_kws=dict(stat=&quot;r&quot;),
 <p><code>CPU times: user 2min 3s, sys: 1.14 s, total: 2min 5s</code><br />
 <code>Wall time: 2min 6s</code></p>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-<figure role="group" aria-describedby="caption-d41d8cd98f00b204e9800998ecf8427e">
-  <a href="https://kldavenport.com/lending-club-python/image15.png" class="img-link">
-    <img src="https://kldavenport.com/lending-club-python/image15_hu2b5b40efde9b3d2c11af2741afa02ece_17458_900x0_resize_box_2.png">
-  </a>
-  <figcaption id="caption-d41d8cd98f00b204e9800998ecf8427e">
-    
-  </figcaption>
-</figure>
-
+<p><img src="image15.png" alt="png" /></p>
 
   </main>
 
@@ -1627,15 +1307,15 @@ sns.jointplot(y,df.meanfico.values,annot_kws=dict(stat=&quot;r&quot;),
     </label>
   </div>
   
-    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://aws.amazon.com/s3/">AWS S3</a>.
+    Made with <a href="https://gohugo.io/">Hugo</a>. Deployed to <a href="https://app.netlify.com/">Netlify</a>. Source on <a href="https://github.com/kevindavenport/kldavenport.com">Github</a>.
   
 </footer>
 
         </div>
       </div>
     </div>
-    <script src="https://kldavenport.com/js/prism.js"></script>
-<script src="https://kldavenport.com/js/dom-scripts.js"></script>
+    <script src="https://kldavenport.netlify.com/js/prism.js"></script>
+<script src="https://kldavenport.netlify.com/js/dom-scripts.js"></script>
 
     
   

@@ -3,236 +3,282 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kldavenport.com/complexity-computability-part1/</loc>
+    <loc>https://kldavenport.netlify.com/complexity-computability-part1/</loc>
     <lastmod>2019-02-21T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/bike-travel/oaxaca/</loc>
+    <loc>https://kldavenport.netlify.com/bike-travel/oaxaca/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/bike-travel/aosta/</loc>
+    <loc>https://kldavenport.netlify.com/bike-travel/aosta/</loc>
     <lastmod>2018-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/bike-travel/whistler/</loc>
+    <loc>https://kldavenport.netlify.com/bike-travel/whistler/</loc>
     <lastmod>2018-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/suttons-temporal-difference-learning/</loc>
+    <loc>https://kldavenport.netlify.com/suttons-temporal-difference-learning/</loc>
     <lastmod>2018-01-21T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/</loc>
+    <loc>https://kldavenport.netlify.com/</loc>
     <lastmod>2017-06-26T18:27:58+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/bike-travel/merida/</loc>
+    <loc>https://kldavenport.netlify.com/bike-travel/merida/</loc>
     <lastmod>2017-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/topic-modeling-amazon-reviews/</loc>
+    <loc>https://kldavenport.netlify.com/topic-modeling-amazon-reviews/</loc>
     <lastmod>2017-03-17T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/a-wild-dataset-has-appeared/</loc>
+    <loc>https://kldavenport.netlify.com/a-wild-dataset-has-appeared/</loc>
     <lastmod>2016-03-17T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/lending-club-python/</loc>
+    <loc>https://kldavenport.netlify.com/lending-club-python/</loc>
     <lastmod>2015-10-17T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/pure-python-decision-trees/</loc>
+    <loc>https://kldavenport.netlify.com/pure-python-decision-trees/</loc>
     <lastmod>2015-06-17T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/the-35-hour-work-week/</loc>
+    <loc>https://kldavenport.netlify.com/the-35-hour-work-week/</loc>
     <lastmod>2015-01-17T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/goisforlovers/</loc>
+    <loc>https://kldavenport.netlify.com/logistic-regression-intuition/</loc>
+    <lastmod>2014-10-17T11:54:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/rolling-correlation-and-regression/</loc>
+    <lastmod>2014-04-17T11:54:26-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/cupper-shortcodes/</loc>
+    <loc>https://kldavenport.netlify.com/cupper-shortcodes/</loc>
     <lastmod>2013-02-12T23:39:06-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/about/</loc>
+    <loc>https://kldavenport.netlify.com/about/</loc>
     <lastmod>2011-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/bike-travel/</loc>
+    <loc>https://kldavenport.netlify.com/bike-travel/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/post/</loc>
+    <loc>https://kldavenport.netlify.com/post/</loc>
     <lastmod>2019-02-21T11:54:26-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/algorithms/</loc>
-    <lastmod>2019-02-21T11:54:26-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kldavenport.com/tags/big-o/</loc>
+    <loc>https://kldavenport.netlify.com/tags/algorithms/</loc>
     <lastmod>2019-02-21T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/correlation/</loc>
+    <loc>https://kldavenport.netlify.com/tags/big-o/</loc>
+    <lastmod>2019-02-21T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/correlation/</loc>
     <lastmod>2016-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/data-engineering/</loc>
+    <loc>https://kldavenport.netlify.com/tags/data-engineering/</loc>
     <lastmod>2016-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/data-exploration/</loc>
+    <loc>https://kldavenport.netlify.com/tags/data-exploration/</loc>
     <lastmod>2016-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/data-science/</loc>
+    <loc>https://kldavenport.netlify.com/tags/data-science/</loc>
     <lastmod>2016-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/decision-trees/</loc>
+    <loc>https://kldavenport.netlify.com/tags/decision-trees/</loc>
     <lastmod>2015-10-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/economics/</loc>
+    <loc>https://kldavenport.netlify.com/tags/economics/</loc>
     <lastmod>2015-01-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/entropy/</loc>
+    <loc>https://kldavenport.netlify.com/tags/entropy/</loc>
     <lastmod>2015-06-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/finance/</loc>
+    <loc>https://kldavenport.netlify.com/tags/finance/</loc>
     <lastmod>2015-10-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/go/</loc>
+    <loc>https://kldavenport.netlify.com/tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/gradient-boosting/</loc>
+    <loc>https://kldavenport.netlify.com/tags/gradient-boosting/</loc>
     <lastmod>2015-10-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/hugo/</loc>
+    <loc>https://kldavenport.netlify.com/tags/hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/lda/</loc>
+    <loc>https://kldavenport.netlify.com/tags/lda/</loc>
     <lastmod>2017-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/monte-carlo/</loc>
+    <loc>https://kldavenport.netlify.com/tags/logistic-regression/</loc>
+    <lastmod>2014-10-17T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/machine-learning/</loc>
+    <lastmod>2014-10-17T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/monte-carlo/</loc>
     <lastmod>2018-01-21T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/nlp/</loc>
+    <loc>https://kldavenport.netlify.com/tags/nlp/</loc>
     <lastmod>2017-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/nlu/</loc>
+    <loc>https://kldavenport.netlify.com/tags/nlu/</loc>
     <lastmod>2017-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/reinforcement-learning/</loc>
+    <loc>https://kldavenport.netlify.com/tags/regression/</loc>
+    <lastmod>2014-04-17T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/reinforcement-learning/</loc>
     <lastmod>2018-01-21T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/shortcodes/</loc>
+    <loc>https://kldavenport.netlify.com/tags/rolling-correlation/</loc>
+    <lastmod>2014-04-17T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/shortcodes/</loc>
     <lastmod>2013-02-12T23:39:06-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/statistics/</loc>
+    <loc>https://kldavenport.netlify.com/tags/statistics/</loc>
     <lastmod>2015-01-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/sutton/</loc>
+    <loc>https://kldavenport.netlify.com/tags/stocks/</loc>
+    <lastmod>2014-04-17T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/supervised-learning/</loc>
+    <lastmod>2014-10-17T11:54:26-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kldavenport.netlify.com/tags/sutton/</loc>
     <lastmod>2018-01-21T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/</loc>
+    <loc>https://kldavenport.netlify.com/tags/</loc>
     <lastmod>2019-02-21T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/templates/</loc>
+    <loc>https://kldavenport.netlify.com/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/time-series/</loc>
+    <loc>https://kldavenport.netlify.com/tags/time-series/</loc>
     <lastmod>2015-01-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/topic-modeling/</loc>
+    <loc>https://kldavenport.netlify.com/tags/topic-modeling/</loc>
     <lastmod>2017-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>

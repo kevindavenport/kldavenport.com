@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logistic Regression on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.netlify.com/tags/logistic-regression/</link>
+    <description>Recent content in Logistic Regression on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Oct 2014 11:54:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.netlify.com/tags/logistic-regression/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understanding Logistic Regression Intuitively</title>
+      <link>https://kldavenport.netlify.com/logistic-regression-intuition/</link>
+      <pubDate>Fri, 17 Oct 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/logistic-regression-intuition/</guid>
+      <description>import numpy as np import matplotlib.pyplot as plt from scipy import optimize import pandas as pd import seaborn as sns from ggplot import * %matplotlib inline  Loading the data # Load training data data = pd.read_csv(&#39;ex2data2.txt&#39;,header=None, names = (&#39;x1&#39;,&#39;x2&#39;,&#39;y&#39;)) data.info()  &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; Int64Index: 118 entries, 0 to 117 Data columns (total 3 columns): x1 118 non-null float64 x2 118 non-null float64 y 118 non-null int64 dtypes: float64(2), int64(1) memory usage: 3.</description>
+    </item>
+    
+  </channel>
+</rss>

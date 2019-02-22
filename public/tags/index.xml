@@ -2,228 +2,282 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kevin Davenport Engineering &amp; ML blog</title>
-    <link>https://kldavenport.com/tags/</link>
+    <link>https://kldavenport.netlify.com/tags/</link>
     <description>Recent content in Tags on Kevin Davenport Engineering &amp; ML blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 21 Feb 2019 11:54:26 -0800</lastBuildDate>
     
-	<atom:link href="https://kldavenport.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kldavenport.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Algorithms</title>
-      <link>https://kldavenport.com/tags/algorithms/</link>
+      <link>https://kldavenport.netlify.com/tags/algorithms/</link>
       <pubDate>Thu, 21 Feb 2019 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/algorithms/</guid>
+      <guid>https://kldavenport.netlify.com/tags/algorithms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Big O</title>
-      <link>https://kldavenport.com/tags/big-o/</link>
+      <link>https://kldavenport.netlify.com/tags/big-o/</link>
       <pubDate>Thu, 21 Feb 2019 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/big-o/</guid>
+      <guid>https://kldavenport.netlify.com/tags/big-o/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Correlation</title>
-      <link>https://kldavenport.com/tags/correlation/</link>
+      <link>https://kldavenport.netlify.com/tags/correlation/</link>
       <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/correlation/</guid>
+      <guid>https://kldavenport.netlify.com/tags/correlation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Engineering</title>
-      <link>https://kldavenport.com/tags/data-engineering/</link>
+      <link>https://kldavenport.netlify.com/tags/data-engineering/</link>
       <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/data-engineering/</guid>
+      <guid>https://kldavenport.netlify.com/tags/data-engineering/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Exploration</title>
-      <link>https://kldavenport.com/tags/data-exploration/</link>
+      <link>https://kldavenport.netlify.com/tags/data-exploration/</link>
       <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/data-exploration/</guid>
+      <guid>https://kldavenport.netlify.com/tags/data-exploration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>https://kldavenport.com/tags/data-science/</link>
+      <link>https://kldavenport.netlify.com/tags/data-science/</link>
       <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/data-science/</guid>
+      <guid>https://kldavenport.netlify.com/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Decision Trees</title>
-      <link>https://kldavenport.com/tags/decision-trees/</link>
+      <link>https://kldavenport.netlify.com/tags/decision-trees/</link>
       <pubDate>Sat, 17 Oct 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/decision-trees/</guid>
+      <guid>https://kldavenport.netlify.com/tags/decision-trees/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Economics</title>
-      <link>https://kldavenport.com/tags/economics/</link>
+      <link>https://kldavenport.netlify.com/tags/economics/</link>
       <pubDate>Sat, 17 Jan 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/economics/</guid>
+      <guid>https://kldavenport.netlify.com/tags/economics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Entropy</title>
-      <link>https://kldavenport.com/tags/entropy/</link>
+      <link>https://kldavenport.netlify.com/tags/entropy/</link>
       <pubDate>Wed, 17 Jun 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/entropy/</guid>
+      <guid>https://kldavenport.netlify.com/tags/entropy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Finance</title>
-      <link>https://kldavenport.com/tags/finance/</link>
+      <link>https://kldavenport.netlify.com/tags/finance/</link>
       <pubDate>Sat, 17 Oct 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/finance/</guid>
+      <guid>https://kldavenport.netlify.com/tags/finance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>https://kldavenport.com/tags/go/</link>
+      <link>https://kldavenport.netlify.com/tags/go/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kldavenport.com/tags/go/</guid>
+      <guid>https://kldavenport.netlify.com/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gradient Boosting</title>
-      <link>https://kldavenport.com/tags/gradient-boosting/</link>
+      <link>https://kldavenport.netlify.com/tags/gradient-boosting/</link>
       <pubDate>Sat, 17 Oct 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/gradient-boosting/</guid>
+      <guid>https://kldavenport.netlify.com/tags/gradient-boosting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://kldavenport.com/tags/hugo/</link>
+      <link>https://kldavenport.netlify.com/tags/hugo/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kldavenport.com/tags/hugo/</guid>
+      <guid>https://kldavenport.netlify.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lda</title>
-      <link>https://kldavenport.com/tags/lda/</link>
+      <link>https://kldavenport.netlify.com/tags/lda/</link>
       <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/lda/</guid>
+      <guid>https://kldavenport.netlify.com/tags/lda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logistic Regression</title>
+      <link>https://kldavenport.netlify.com/tags/logistic-regression/</link>
+      <pubDate>Fri, 17 Oct 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://kldavenport.netlify.com/tags/machine-learning/</link>
+      <pubDate>Fri, 17 Oct 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monte Carlo</title>
-      <link>https://kldavenport.com/tags/monte-carlo/</link>
+      <link>https://kldavenport.netlify.com/tags/monte-carlo/</link>
       <pubDate>Sun, 21 Jan 2018 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/monte-carlo/</guid>
+      <guid>https://kldavenport.netlify.com/tags/monte-carlo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nlp</title>
-      <link>https://kldavenport.com/tags/nlp/</link>
+      <link>https://kldavenport.netlify.com/tags/nlp/</link>
       <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/nlp/</guid>
+      <guid>https://kldavenport.netlify.com/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nlu</title>
-      <link>https://kldavenport.com/tags/nlu/</link>
+      <link>https://kldavenport.netlify.com/tags/nlu/</link>
       <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/nlu/</guid>
+      <guid>https://kldavenport.netlify.com/tags/nlu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression</title>
+      <link>https://kldavenport.netlify.com/tags/regression/</link>
+      <pubDate>Thu, 17 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reinforcement Learning</title>
-      <link>https://kldavenport.com/tags/reinforcement-learning/</link>
+      <link>https://kldavenport.netlify.com/tags/reinforcement-learning/</link>
       <pubDate>Sun, 21 Jan 2018 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/reinforcement-learning/</guid>
+      <guid>https://kldavenport.netlify.com/tags/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rolling Correlation</title>
+      <link>https://kldavenport.netlify.com/tags/rolling-correlation/</link>
+      <pubDate>Thu, 17 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/tags/rolling-correlation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shortcodes</title>
-      <link>https://kldavenport.com/tags/shortcodes/</link>
+      <link>https://kldavenport.netlify.com/tags/shortcodes/</link>
       <pubDate>Tue, 12 Feb 2013 23:39:06 -0600</pubDate>
       
-      <guid>https://kldavenport.com/tags/shortcodes/</guid>
+      <guid>https://kldavenport.netlify.com/tags/shortcodes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>https://kldavenport.com/tags/statistics/</link>
+      <link>https://kldavenport.netlify.com/tags/statistics/</link>
       <pubDate>Sat, 17 Jan 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/statistics/</guid>
+      <guid>https://kldavenport.netlify.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stocks</title>
+      <link>https://kldavenport.netlify.com/tags/stocks/</link>
+      <pubDate>Thu, 17 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/tags/stocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Supervised Learning</title>
+      <link>https://kldavenport.netlify.com/tags/supervised-learning/</link>
+      <pubDate>Fri, 17 Oct 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.netlify.com/tags/supervised-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sutton</title>
-      <link>https://kldavenport.com/tags/sutton/</link>
+      <link>https://kldavenport.netlify.com/tags/sutton/</link>
       <pubDate>Sun, 21 Jan 2018 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/sutton/</guid>
+      <guid>https://kldavenport.netlify.com/tags/sutton/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Templates</title>
-      <link>https://kldavenport.com/tags/templates/</link>
+      <link>https://kldavenport.netlify.com/tags/templates/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kldavenport.com/tags/templates/</guid>
+      <guid>https://kldavenport.netlify.com/tags/templates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time Series</title>
-      <link>https://kldavenport.com/tags/time-series/</link>
+      <link>https://kldavenport.netlify.com/tags/time-series/</link>
       <pubDate>Sat, 17 Jan 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/time-series/</guid>
+      <guid>https://kldavenport.netlify.com/tags/time-series/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Topic Modeling</title>
-      <link>https://kldavenport.com/tags/topic-modeling/</link>
+      <link>https://kldavenport.netlify.com/tags/topic-modeling/</link>
       <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/tags/topic-modeling/</guid>
+      <guid>https://kldavenport.netlify.com/tags/topic-modeling/</guid>
       <description></description>
     </item>
     

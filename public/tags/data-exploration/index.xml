@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Exploration on Kevin Davenport Engineering &amp; ML blog</title>
-    <link>https://kldavenport.com/tags/data-exploration/</link>
+    <link>https://kldavenport.netlify.com/tags/data-exploration/</link>
     <description>Recent content in Data Exploration on Kevin Davenport Engineering &amp; ML blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Mar 2016 11:54:26 -0800</lastBuildDate>
     
-	<atom:link href="https://kldavenport.com/tags/data-exploration/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kldavenport.netlify.com/tags/data-exploration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A wild dataset has appeared! Now what?</title>
-      <link>https://kldavenport.com/a-wild-dataset-has-appeared/</link>
+      <link>https://kldavenport.netlify.com/a-wild-dataset-has-appeared/</link>
       <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/a-wild-dataset-has-appeared/</guid>
+      <guid>https://kldavenport.netlify.com/a-wild-dataset-has-appeared/</guid>
       <description>Where do we start when we stumble across a dataset we don’t know much about? Lets say one where we don’t necessarily understand the underlying generative process for some or all of the variables. Lets assume for now we’re sure there aren’t one off interventions or level shifts in the data, and we don’t know anything about the distribution of the features, trends, seasonality, model parameters, variance, etc.
 I tend to start with the simplest, most interpretable models first, regardless if the problem requires classification, regression, or causality modeling.</description>
     </item>
     
     <item>
       <title>Lending Club Data Analysis Revisited with Python</title>
-      <link>https://kldavenport.com/lending-club-python/</link>
+      <link>https://kldavenport.netlify.com/lending-club-python/</link>
       <pubDate>Sat, 17 Oct 2015 11:54:26 -0800</pubDate>
       
-      <guid>https://kldavenport.com/lending-club-python/</guid>
+      <guid>https://kldavenport.netlify.com/lending-club-python/</guid>
       <description>2.5 years ago I analyzed Lending Club’s issued loans data (I was using R back then!). It was the most visited blog post on my site in 2013 through 2014. Today it’s still number 5. Reddit picked up my simple “35-hour work week with Python” post which is now #1.
 Lending Club is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC).</description>
     </item>
