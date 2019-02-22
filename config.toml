@@ -15,7 +15,7 @@ googleAnalytics = "UA-34706513-1"
 
 [params]
   mainSections = ["blog","post","Blog"]
-  footer = "Made with [Hugo](https://gohugo.io/). Deployed to [Netlify](https://app.netlify.com/). Source on [Github](https://github.com/kevindavenport/kldavenport.com)."
+  footer = "Made w/ [Hugo](https://gohugo.io/). Deployed by [Netlify](https://app.netlify.com/)."
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "Jan 2, 2006"
   codePenUser = "someUser"
