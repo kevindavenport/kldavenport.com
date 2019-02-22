@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/tags/hugo/</link>
+    <description>Recent content in Hugo on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://kldavenport.com/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Cupper Shortcodes</title>
+      <link>https://kldavenport.com/cupper-shortcodes/</link>
+      <pubDate>Tue, 12 Feb 2013 23:39:06 -0600</pubDate>
+      
+      <guid>https://kldavenport.com/cupper-shortcodes/</guid>
+      <description>blockquote {{% blockquote author=&amp;quot;Carl Jung&amp;quot; %}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity. {{% /blockquote %}}   Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness.</description>
+    </item>
+    
+  </channel>
+</rss>

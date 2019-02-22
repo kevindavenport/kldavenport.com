@@ -1,0 +1,43 @@
+baseURL = "https://kldavenport.com"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Kevin Davenport Engineering & ML blog"
+theme = "cupper"
+googleAnalytics = "UA-34706513-1"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+
+[params]
+  mainSections = ["blog","post","Blog"]
+  footer = "Made with [Hugo](https://gohugo.io/). Deployed to [AWS S3](https://aws.amazon.com/s3/)."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  codePenUser = "someUser"
+
+[menu]
+  [[menu.nav]]
+    name = "Blog"
+    url = "/post/"
+    weight = 2
+  [[menu.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+  [[menu.nav]]
+    name = "Bike Travel"
+    url = "/bike-travel/"
+    weight = 4    
+  [[menu.nav]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 5  
+  [[menu.nav]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 6
