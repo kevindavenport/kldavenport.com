@@ -1,6 +1,5 @@
 {{ define "main" }}
   <main id="main">
-    <br>
     <ul class="patterns-list">
     {{ range where site.RegularPages.ByPublishDate.Reverse "Type" "in" site.Params.mainSections}}
       <li>
