@@ -108,7 +108,7 @@ If the output of $h_\theta(x)\lt .5$, then 0<br>
 
 Recall that we'll have a vector of coefficients $\theta$ that we chose to get us as close to y (our labels) as possible, that is to say choose $\theta_0$, $\theta_1$, $\theta_2$ (assuming we only have three coefficients) that minimize the sum of the squared differences (squared error).
 
-![caption](http://kldavenport.com/wp-content/uploads/2014/11/logisitic_regression_blog2.png "Matrix Examples")
+![caption](output_111.png "Matrix Examples")
 
 <br>
 So it's a clean linear algebra process of: **Prediction = Data * Parameters**
@@ -509,8 +509,6 @@ plot_decision_boundary(optimal_theta3, X, y)
     Cost at theta found by fmin_bfgs: 0.630695565717
 
 ![png](output_40_1.png)
-
-![sci-kit learn logo](http://kldavenport.com/scikit-learn-logo.png)
 
 ## Regularized Logistic Regression with scikit-learn
 What we did above was more verbose than necessary, but could have been much worse without NumPy. Below we'll work on the same problem from beginning to end with substantially less lines of code.
