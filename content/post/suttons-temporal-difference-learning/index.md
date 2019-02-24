@@ -320,6 +320,5 @@ img="image4.png"
 command="Resize" 
 options="700x" >}}
 
-To conclude, here is a short simple video from Peter Norvig that provides good intuition on TD learning:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DZzffdHNqtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+To conclude, [here is a short simple video](https://www.youtube.com/embed/DZzffdHNqtQ) from Peter Norvig that provides good intuition on TD learning.
 
