@@ -6,10 +6,7 @@ title: "About"
 [Github](https://github.com/kevindavenport) -
 [Stack overflow](https://stackoverflow.com/users/1549844/kldavenport) -
 [Strava](https://www.strava.com/athletes/16706) -
-[Linkedin](https://www.linkedin.com/in/davenportkevin/) -
-[Instagram](https://www.instagram.com/Kldavenportjr/) -
-[Twitter](https://twitter.com/KevinLDavenport) 
-
+[Linkedin](https://www.linkedin.com/in/davenportkevin/)
 
 I am a lover of all things conservation and mountain biking. As someone who was raised in the inner city – I am especially interested in youth enablement through sport.  I serve organizations that introduce young people to the camaraderie and sense of identity that an outdoor sport like mountain biking offers in a world where technology competes for their time and attention. I'm also dedicated to promote land stewardship, taking people outside to teach them about the benefits that land provides. Today’s youth spend exceedingly less time outdoors, and they can’t protect something if they don’t love it, and they can’t love it if they don’t know it.
 
