@@ -246,8 +246,6 @@ label {
 }
 
 /* Tables */
-
-
 table {
     text-align: left;
     width: 50%;
@@ -259,7 +257,6 @@ table {
     table-layout: auto;
     border-collapse: collapse;
 }
-
 th,
 td {
     border: 2px solid;

@@ -2,7 +2,7 @@ baseURL = "https://kldavenport.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Kevin Davenport Engineering & ML blog"
-theme = "cupper"
+theme = "cupper-hugo-theme"
 googleAnalytics = "UA-34706513-1"
 
 [taxonomies]
