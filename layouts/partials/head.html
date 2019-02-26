@@ -21,8 +21,8 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 <!-- KLD 2/22/19 added -->
- <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
   <link rel="stylesheet" href="/css/styles.css">
+ <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   {{ $templateStyles := resources.Get "css/template-styles.css" }}
   {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . }}
