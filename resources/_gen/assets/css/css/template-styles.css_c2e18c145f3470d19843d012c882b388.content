@@ -246,12 +246,20 @@ label {
 }
 
 /* Tables */
+
+
 table {
     text-align: left;
-    table-layout: fixed;
-    width: 100%;
+    width: 50%;
+    color: red;
+    border: none;
+    border-spacing: 0;
+    color: black;
+    font-size: 11px;
+    table-layout: auto;
     border-collapse: collapse;
 }
+
 th,
 td {
     border: 2px solid;
