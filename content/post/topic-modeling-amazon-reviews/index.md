@@ -1,7 +1,7 @@
 ---
 title: "Topic Modeling Amazon Product Reviews"
 date: 2017-03-17T11:54:26-08:00
-tags: [LDA, NLP, NLU, Topic Modeling]
+tags: [Gensim, NLTK, LDA, NLP, NLU, Topic Modeling]
 ---
 I found Professor Julian McAuley’s [work at UCSD](https://cseweb.ucsd.edu/~jmcauley/) when I was searching for academic work identifying the ontology and utility of products on Amazon. Professor McAuley and his students have accomplished impressive work inferring networks of substitutable and complementary items. They constructed a browseable product graph of related products and discovered topics or ‘microcategories’ that are associated with product relationships to infer networks of substitutable and complementary products. Much of this work utilizes topic modeling, and as I’ve never applied it in academia or work, this blog will be a practical intro to [Latent Dirichlet Allocation (LDA)](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) through code. More broadly what can we do with and what do we need to know about LDA?
 

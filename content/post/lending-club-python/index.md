@@ -1,10 +1,8 @@
 ---
-title: "Lending Club Data Analysis Revisited with Python"
+title: "Lending Club Data Analysis with Python"
 date: 2015-10-17T11:54:26-08:00
 tags: [finance, gradient boosting, decision trees, data science, data exploration, data engineering, correlation]
 ---
-
-2.5 years ago I analyzed Lending Club’s issued loans data (I was using R back then!). It was the most visited blog post on my site in 2013 through 2014. Today it’s still number 5. Reddit picked up my simple “35-hour work week with Python” post which is now #1.
 
 [Lending Club](https://www.lendingclub.com) is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.
 

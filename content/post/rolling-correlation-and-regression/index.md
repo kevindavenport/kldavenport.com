@@ -1,10 +1,10 @@
 ---
-title: "Rolling Correlation and Regression"
+title: "Time-Series Correlation and Regression"
 date: 2014-04-17T11:54:26-08:00
 tags: [rolling correlation, stocks, regression, time-series]
 ---
 
-Today’s article will showcase a subset of Pandas’ time-series modeling capabilities. I’ll be using financial data to demonstrate the capabilities, however, the functions can be applied to any time-series data (application logs, netflow, bio-metrics, etc). The focus will be on moving or sliding window methods. These dynamic models account for time-dependent changes for any given state in a system whereas steady-state or static models are time-invariant as they naively calculate the system in equilibrium.
+This post will showcase a subset of Pandas’ time-series modeling capabilities. I’ll be using financial data to demonstrate the capabilities, however, the functions can be applied to any time-series data (application logs, netflow, bio-metrics, etc). The focus will be on moving or sliding window methods. These dynamic models account for time-dependent changes for any given state in a system whereas steady-state or static models are time-invariant as they naively calculate the system in equilibrium.
 
 In correlation modeling (Pearson, Spearman, or Kendall) we look at the co-movement between the changes in two arrays of data, in this case time-series arrays. A dynamic implementation would include a rolling-correlation that would return a series or array of new data whereas a static implementation would return a single value that represents the correlation “all at once”. This distinction will become clearer with the visualizations below.
 
