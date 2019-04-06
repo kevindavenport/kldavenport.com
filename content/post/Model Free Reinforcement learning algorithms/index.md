@@ -4,21 +4,17 @@ date: 2014-01-21T11:54:26-08:00
 tags: [reinforcement learning, sutton, monte carlo]
 ---
 
-{{< figure
-img="image0.png" 
-command="Resize" 
-options="700x" >}}
-
-I struggled with the intuition behind Sutton’s [Learning to Predict by the Methods of Temporal Differences paper](https://www.semanticscholar.org/paper/Learning-to-predict-by-the-methods-of-temporal-Sutton/094ca99cc94e38984823776158da738e5bc3963d). I hit the wall early on the “A Random-Walk” example (Page 19 3.2). I read Chapter 6 and 12 of Sutton’s Reinforcement Learning textbook to gain more intuition. [(available for free)](http://incompleteideas.net/book/the-book.html). To work through my reproduction of the "A Random Walk" below, I recommend at minimum the reader has a basic understanding of [Value-Functions](https://en.wikipedia.org/wiki/Reinforcement_learning#Value_function) and [Q-Learning](https://en.wikipedia.org/wiki/Q-learning).
-
-A critical aspect of research is the reproduction of previously published results. Yet most will find reproduction of research challenging since important parameters needed to reproduce results are often not stated in the papers. I’ve noticed in the past 5 years there has been a sort of catharsis regarding the lack of reproducibility [[1]](https://www.nature.com/collections/prbfkwmwvz/)[[2]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5220388/)[[3]](https://www.sciencemag.org/news/2016/02/if-you-fail-reproduce-another-scientist-s-results-journal-wants-know?r3f_986=http://kldavenport.com/suttons-temporal-difference-learning/). This isn’t an issue for wetlab science alone [[4]](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002165). The obvious benefit of reproduction is to aid in your own understanding of the results. This then enables one to extend and compare new contributions to existing publications.
-
 Reproducibility means different things to many people working the applied sciences space. The continuum appears to be sharing:
 1. Code (.py, .cpp files)
 2. Jupyter Notebook
 3. Docker Container 
 
 With #1 and #2 you are putting the onus on the recepient to have the same environment as you, maybe you point them to the same Anaconda distribution. With #3 you get an easy way to share your working environments including libraries and drivers. On a related note please check out this entertaining and education talk on ["I Don't Like Notebooks"](https://docs.google.com/presentation/d/1n2RlMdmv1p25Xy5thJUhkKGvjtV-dkAIsUXP-AL4ffI/edit) by Joel Grus.
+
+A critical aspect of research is the reproduction of previously published results. Yet most will find reproduction of research challenging since important parameters needed to reproduce results are often not stated in the papers. I’ve noticed in the past 5 years there has been a sort of catharsis regarding the lack of reproducibility [[1]](https://www.nature.com/collections/prbfkwmwvz/)[[2]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5220388/)[[3]](https://www.sciencemag.org/news/2016/02/if-you-fail-reproduce-another-scientist-s-results-journal-wants-know?r3f_986=http://kldavenport.com/suttons-temporal-difference-learning/). This isn’t an issue for wetlab science alone [[4]](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002165). The obvious benefit of reproduction is to aid in your own understanding of the results. This then enables one to extend and compare new contributions to existing publications.
+
+I struggled with the intuition behind Sutton’s [Learning to Predict by the Methods of Temporal Differences paper](https://www.semanticscholar.org/paper/Learning-to-predict-by-the-methods-of-temporal-Sutton/094ca99cc94e38984823776158da738e5bc3963d). I hit the wall early on the “A Random-Walk” example (Page 19 3.2). I read Chapter 6 and 12 of Sutton’s Reinforcement Learning textbook to gain more intuition. [(available for free)](http://incompleteideas.net/book/the-book.html). To work through my reproduction of the "A Random Walk" below, I recommend at minimum the reader has a basic understanding of [Value-Functions](https://en.wikipedia.org/wiki/Reinforcement_learning#Value_function) and [Q-Learning](https://en.wikipedia.org/wiki/Q-learning).
+
 
 ## TD-Learning
 Temporal-Difference (TD) algorithms work without an explicit model and learn from the experience and outcomes of iterating over multiple episodes (or sequences). TD Learning is similar to Monte Carlo methods, however TD can learn from individual steps without needing the final result. These are among other differences:
