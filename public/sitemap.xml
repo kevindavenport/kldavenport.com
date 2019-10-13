@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://kldavenport.com/betweenness-centrality/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kldavenport.com/complexity-computability-part1/</loc>
     <lastmod>2019-02-21T11:54:26-08:00</lastmod>
   </url>
@@ -109,18 +104,12 @@
   
   <url>
     <loc>https://kldavenport.com/post/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
+    <lastmod>2019-02-21T11:54:26-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kldavenport.com/tags/algorithms/</loc>
     <lastmod>2019-02-21T11:54:26-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kldavenport.com/tags/betweenness-centrality/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -167,12 +156,6 @@
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/eigenvector-centrality/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kldavenport.com/tags/entropy/</loc>
     <lastmod>2015-06-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
@@ -209,12 +192,6 @@
   </url>
   
   <url>
-    <loc>https://kldavenport.com/tags/knowledge-graph/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kldavenport.com/tags/lda/</loc>
     <lastmod>2017-03-17T11:54:26-08:00</lastmod>
     <priority>0</priority>
@@ -235,18 +212,6 @@
   <url>
     <loc>https://kldavenport.com/tags/monte-carlo/</loc>
     <lastmod>2014-01-21T11:54:26-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kldavenport.com/tags/network-analysis/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kldavenport.com/tags/network-x/</loc>
-    <lastmod>2019-07-26T11:54:26-08:00</lastmod>
     <priority>0</priority>
   </url>
   

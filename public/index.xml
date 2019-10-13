@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Betweenness Centrality</title>
-      <link>https://kldavenport.com/betweenness-centrality/</link>
-      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
-      
-      <guid>https://kldavenport.com/betweenness-centrality/</guid>
-      <description>Lending Club is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.</description>
-    </item>
-    
-    <item>
       <title>Computability, Complexity, &amp; Algorithms Part 1</title>
       <link>https://kldavenport.com/complexity-computability-part1/</link>
       <pubDate>Thu, 21 Feb 2019 11:54:26 -0800</pubDate>
@@ -89,7 +80,7 @@ Merida is a beautiful unique city with the styling and diversity that an average
     </item>
     
     <item>
-      <title>A Wild Aataset Has Appeared! Now What?</title>
+      <title>A Wild Dataset Has Appeared! Now What?</title>
       <link>https://kldavenport.com/a-wild-dataset-has-appeared/</link>
       <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
       

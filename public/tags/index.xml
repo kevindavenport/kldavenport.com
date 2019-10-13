@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Betweenness Centrality</title>
-      <link>https://kldavenport.com/tags/betweenness-centrality/</link>
-      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
-      
-      <guid>https://kldavenport.com/tags/betweenness-centrality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Big O</title>
       <link>https://kldavenport.com/tags/big-o/</link>
       <pubDate>Thu, 21 Feb 2019 11:54:26 -0800</pubDate>
@@ -93,15 +84,6 @@
     </item>
     
     <item>
-      <title>Eigenvector Centrality</title>
-      <link>https://kldavenport.com/tags/eigenvector-centrality/</link>
-      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
-      
-      <guid>https://kldavenport.com/tags/eigenvector-centrality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Entropy</title>
       <link>https://kldavenport.com/tags/entropy/</link>
       <pubDate>Wed, 17 Jun 2015 11:54:26 -0800</pubDate>
@@ -156,15 +138,6 @@
     </item>
     
     <item>
-      <title>Knowledge Graph</title>
-      <link>https://kldavenport.com/tags/knowledge-graph/</link>
-      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
-      
-      <guid>https://kldavenport.com/tags/knowledge-graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Lda</title>
       <link>https://kldavenport.com/tags/lda/</link>
       <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
@@ -197,24 +170,6 @@
       <pubDate>Tue, 21 Jan 2014 11:54:26 -0800</pubDate>
       
       <guid>https://kldavenport.com/tags/monte-carlo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network Analysis</title>
-      <link>https://kldavenport.com/tags/network-analysis/</link>
-      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
-      
-      <guid>https://kldavenport.com/tags/network-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Network X</title>
-      <link>https://kldavenport.com/tags/network-x/</link>
-      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
-      
-      <guid>https://kldavenport.com/tags/network-x/</guid>
       <description></description>
     </item>
     
