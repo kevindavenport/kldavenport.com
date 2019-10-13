@@ -1,5 +1,5 @@
 ---
-title: "A Wild Aataset Has Appeared! Now What?"
+title: "A Wild Dataset Has Appeared! Now What?"
 date: 2016-03-17T11:54:26-08:00
 tags: [data science, data exploration, data engineering, correlation]
 ---
