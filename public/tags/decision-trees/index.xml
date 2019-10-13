@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Decision Trees on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/tags/decision-trees/</link>
+    <description>Recent content in Decision Trees on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2015 11:54:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/tags/decision-trees/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lending Club Data Analysis with Python</title>
+      <link>https://kldavenport.com/lending-club-python/</link>
+      <pubDate>Sat, 17 Oct 2015 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/lending-club-python/</guid>
+      <description>Lending Club is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.</description>
+    </item>
+    
+    <item>
+      <title>Pure Python Decision Trees</title>
+      <link>https://kldavenport.com/pure-python-decision-trees/</link>
+      <pubDate>Wed, 17 Jun 2015 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/pure-python-decision-trees/</guid>
+      <description>By now we all know what Random Forests is. We know about the great off-the-self performance, ease of tuning and parallelization, as well as it’s importance measures. It’s easy for engineers implementing RF to forget about it’s underpinnings. Unlike some of it’s more modern and advanced contemporaries, descision trees are easy to interpret. A neural net might obtain great results but it is difficult to work backwards from and explain to stake holders as the weights of the connections between two neurons have little meaning on their own.</description>
+    </item>
+    
+  </channel>
+</rss>

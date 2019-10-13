@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stocks on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/tags/stocks/</link>
+    <description>Recent content in Stocks on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Apr 2014 11:54:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/tags/stocks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time-Series Correlation and Regression</title>
+      <link>https://kldavenport.com/rolling-correlation-and-regression/</link>
+      <pubDate>Thu, 17 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/rolling-correlation-and-regression/</guid>
+      <description>This post will showcase a subset of Pandas’ time-series modeling capabilities. I’ll be using financial data to demonstrate the capabilities, however, the functions can be applied to any time-series data (application logs, netflow, bio-metrics, etc). The focus will be on moving or sliding window methods. These dynamic models account for time-dependent changes for any given state in a system whereas steady-state or static models are time-invariant as they naively calculate the system in equilibrium.</description>
+    </item>
+    
+  </channel>
+</rss>

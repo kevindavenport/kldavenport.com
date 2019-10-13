@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monte Carlo on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/tags/monte-carlo/</link>
+    <description>Recent content in Monte Carlo on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jan 2014 11:54:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/tags/monte-carlo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Model Free Reinforcement Learning Algorithms</title>
+      <link>https://kldavenport.com/model-free-reinforcement-learning-algorithms/</link>
+      <pubDate>Tue, 21 Jan 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/model-free-reinforcement-learning-algorithms/</guid>
+      <description>Reproducibility means different things to many people working the applied sciences space. The continuum appears to be sharing: 1. Code (.py, .cpp files) 2. Jupyter Notebook 3. Docker Container
+With #1 and #2 you are putting the onus on the recepient to have the same environment as you, maybe you point them to the same Anaconda distribution. With #3 you get an easy way to share your working environments including libraries and drivers.</description>
+    </item>
+    
+  </channel>
+</rss>

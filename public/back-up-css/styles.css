@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
     font-family: 'Miriam Libre';
-    src: url('https://kldavenport.com/css/fonts/miriamlibre-bold.woff2') format('woff2'), url('https://kldavenport.com/css/fonts/miriamlibre-bold.woff') format('woff');
+    src: url('{{ "css/fonts/miriamlibre-bold.woff2" | absURL }}') format('woff2'), url('{{ "css/fonts/miriamlibre-bold.woff" | absURL }}') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -55,9 +55,12 @@ abbr {
     cursor: help;
     border-bottom: 1px dashed;
 }
+/*     max-height: 75vh; */
+/*     modified by KLD */
+
 img {
     max-width: 100%;
-    max-height: 50vh;
+    max-height: 100%;
 }
 .img-link {
     border-bottom: none;
@@ -246,6 +249,8 @@ label {
 }
 
 /* Tables */
+/* modified by KLD*/
+
 table {
     text-align: left;
     width: 50%;
@@ -260,7 +265,7 @@ table {
 th,
 td {
     border: 2px solid;
-    padding: 0.5rem;
+    padding: 0.25rem;
     line-height: 1.25;
     margin: 0;
 }
@@ -352,7 +357,7 @@ caption {
     margin-left: 15rem;
 }
 .main-and-footer > div {
-    max-width: 45rem;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 2.25rem;
 }
@@ -496,7 +501,7 @@ caption {
 }
 .note.warning {
     border-left: 0;
-    background-image: url(https://kldavenport.com/css/images/stripe.svg);
+    background-image: url({{ "css/images/stripe.svg" | absURL }});
     background-size: 0.5rem auto;
     background-repeat: repeat-y;
 }
@@ -515,7 +520,7 @@ caption {
     width: 1rem;
     height: 1rem;
     margin-right: 0.25rem;
-    background-image: url(https://kldavenport.com/css/images/icon-tick.svg);
+    background-image: url({{ "css/images/icon-tick.svg" | absURL }});
     background-size: 100% auto;
     position: absolute;
     left: -1.25rem;

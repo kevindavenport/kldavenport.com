@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="generator" content="Hugo 0.54.0" />
+  <link rel="canonical" href="https://kldavenport.com/detecting-randomly-generated-domains/">
+
+  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://kldavenport.com/css/prism.css" media="none" onload="this.media='all';">
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="https://kldavenport.com/css/styles.css">
+
+  <style id="inverter" media="none">
+    html { filter: invert(100%) }
+    * { background-color: inherit }
+    img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
+  </style>
+
+  
+  
+  <title>Using Entropy to Detect Randomly Generated Domains | Kevin Davenport Engineering &amp; ML blog</title>
+</head>
+
+  <body>
+    <a href="#main">skip to content</a>
+    <svg style="display: none">
+  <symbol id="bookmark" viewBox="0 0 40 50">
+   <g transform="translate(2266 3206.2)">
+    <path style="stroke:currentColor;stroke-width:3.2637;fill:none" d="m-2262.2-3203.4-.2331 42.195 16.319-16.318 16.318 16.318.2331-42.428z"/>
+   </g>
+  </symbol>
+
+  <symbol id="w3c" viewBox="0 0 127.09899 67.763">
+   <text font-size="83" style="font-size:83px;font-family:Trebuchet;letter-spacing:-12;fill-opacity:0" letter-spacing="-12" y="67.609352" x="-26.782778">W3C</text>
+   <text font-size="83" style="font-size:83px;font-weight:bold;font-family:Trebuchet;fill-opacity:0" y="67.609352" x="153.21722" font-weight="bold">SVG</text>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m33.695.377 12.062 41.016 12.067-41.016h8.731l-19.968 67.386h-.831l-12.48-41.759-12.479 41.759h-.832l-19.965-67.386h8.736l12.061 41.016 8.154-27.618-3.993-13.397h8.737z"/>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m91.355 46.132c0 6.104-1.624 11.234-4.862 15.394-3.248 4.158-7.45 6.237-12.607 6.237-3.882 0-7.263-1.238-10.148-3.702-2.885-2.47-5.02-5.812-6.406-10.022l6.82-2.829c1.001 2.552 2.317 4.562 3.953 6.028 1.636 1.469 3.56 2.207 5.781 2.207 2.329 0 4.3-1.306 5.909-3.911 1.609-2.606 2.411-5.738 2.411-9.401 0-4.049-.861-7.179-2.582-9.399-1.995-2.604-5.129-3.912-9.397-3.912h-3.327v-3.991l11.646-20.133h-14.062l-3.911 6.655h-2.493v-14.976h32.441v4.075l-12.31 21.217c4.324 1.385 7.596 3.911 9.815 7.571 2.22 3.659 3.329 7.953 3.329 12.892z"/>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.21 0 1.414 8.6-5.008 9.583s-1.924-4.064-5.117-6.314c-2.693-1.899-4.447-2.309-7.186-1.746-3.527.73-7.516 4.938-9.258 10.13-2.084 6.21-2.104 9.218-2.178 11.978-.115 4.428.58 7.043.58 7.043s-3.04-5.626-3.011-13.866c.018-5.882.947-11.218 3.666-16.479 2.404-4.627 5.954-7.404 9.114-7.728 3.264-.343 5.848 1.229 7.841 2.938 2.089 1.788 4.213 5.698 4.213 5.698l4.94-9.837z"/>
+   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.82 48.674s-2.208 3.957-3.589 5.48c-1.379 1.524-3.849 4.209-6.896 5.555-3.049 1.343-4.646 1.598-7.661 1.306-3.01-.29-5.807-2.032-6.786-2.764-.979-.722-3.486-2.864-4.897-4.854-1.42-2-3.634-5.995-3.634-5.995s1.233 4.001 2.007 5.699c.442.977 1.81 3.965 3.749 6.572 1.805 2.425 5.315 6.604 10.652 7.545 5.336.945 9.002-1.449 9.907-2.031.907-.578 2.819-2.178 4.032-3.475 1.264-1.351 2.459-3.079 3.116-4.108.487-.758 1.276-2.286 1.276-2.286l-1.276-6.644z"/>
+  </symbol>
+
+  <symbol id="tag" viewBox="0 0 177.16535 177.16535">
+    <g transform="translate(0 -875.2)">
+     <path style="fill-rule:evenodd;stroke-width:0;fill:currentColor" d="m159.9 894.3-68.79 8.5872-75.42 77.336 61.931 60.397 75.429-76.565 6.8495-69.755zm-31.412 31.835a10.813 10.813 0 0 1 1.8443 2.247 10.813 10.813 0 0 1 -3.5174 14.872l-.0445.0275a10.813 10.813 0 0 1 -14.86 -3.5714 10.813 10.813 0 0 1 3.5563 -14.863 10.813 10.813 0 0 1 13.022 1.2884z"/>
+    </g>
+  </symbol>
+
+  <symbol id="balloon" viewBox="0 0 141.73228 177.16535">
+   <g transform="translate(0 -875.2)">
+    <g>
+     <path style="fill:currentColor" d="m68.156 882.83-.88753 1.4269c-4.9564 7.9666-6.3764 17.321-5.6731 37.378.36584 10.437 1.1246 23.51 1.6874 29.062.38895 3.8372 3.8278 32.454 4.6105 38.459 4.6694-.24176 9.2946.2879 14.377 1.481 1.2359-3.2937 5.2496-13.088 8.886-21.623 6.249-14.668 8.4128-21.264 10.253-31.252 1.2464-6.7626 1.6341-12.156 1.4204-19.764-.36325-12.93-2.1234-19.487-6.9377-25.843-2.0833-2.7507-6.9865-7.6112-7.9127-7.8436-.79716-.20019-6.6946-1.0922-6.7755-1.0248-.02213.0182-5.0006-.41858-7.5248-.22808l-2.149-.22808h-3.3738z"/>
+     <path style="fill:currentColor" d="m61.915 883.28-3.2484.4497c-1.7863.24724-3.5182.53481-3.8494.63994-2.4751.33811-4.7267.86957-6.7777 1.5696-.28598 0-1.0254.20146-2.3695.58589-5.0418 1.4418-6.6374 2.2604-8.2567 4.2364-6.281 7.6657-11.457 18.43-12.932 26.891-1.4667 8.4111.71353 22.583 5.0764 32.996 3.8064 9.0852 13.569 25.149 22.801 37.517 1.3741 1.841 2.1708 2.9286 2.4712 3.5792 3.5437-1.1699 6.8496-1.9336 10.082-2.3263-1.3569-5.7831-4.6968-21.86-6.8361-33.002-.92884-4.8368-2.4692-14.322-3.2452-19.991-.68557-5.0083-.77707-6.9534-.74159-15.791.04316-10.803.41822-16.162 1.5026-21.503 1.4593-5.9026 3.3494-11.077 6.3247-15.852z"/>
+     <path style="fill:currentColor" d="m94.499 885.78c-.10214-.0109-.13691 0-.0907.0409.16033.13489 1.329 1.0675 2.5976 2.0723 6.7003 5.307 11.273 14.568 12.658 25.638.52519 4.1949.24765 14.361-.5059 18.523-2.4775 13.684-9.7807 32.345-20.944 53.519l-3.0559 5.7971c2.8082.76579 5.7915 1.727 8.9926 2.8441 11.562-11.691 18.349-19.678 24.129-28.394 7.8992-11.913 11.132-20.234 12.24-31.518.98442-10.02-1.5579-20.876-6.7799-28.959-.2758-.4269-.57803-.86856-.89617-1.3166-3.247-6.13-9.752-12.053-21.264-16.131-2.3687-.86369-6.3657-2.0433-7.0802-2.1166z"/>
+     <path style="fill:currentColor" d="m32.52 892.22c-.20090-.13016-1.4606.81389-3.9132 2.7457-11.486 9.0476-17.632 24.186-16.078 39.61.79699 7.9138 2.4066 13.505 5.9184 20.562 5.8577 11.77 14.749 23.219 30.087 38.74.05838.059.12188.1244.18052.1838 1.3166-.5556 2.5965-1.0618 3.8429-1.5199-.66408-.32448-1.4608-1.3297-3.8116-4.4602-5.0951-6.785-8.7512-11.962-13.051-18.486-5.1379-7.7948-5.0097-7.5894-8.0586-13.054-6.2097-11.13-8.2674-17.725-8.6014-27.563-.21552-6.3494.13041-9.2733 1.775-14.987 2.1832-7.5849 3.9273-10.986 9.2693-18.07 1.7839-2.3656 2.6418-3.57 2.4409-3.7003z"/>
+     <path style="fill:currentColor" d="m69.133 992.37c-6.2405.0309-12.635.76718-19.554 2.5706 4.6956 4.7759 9.935 10.258 12.05 12.625l4.1272 4.6202h11.493l3.964-4.4516c2.0962-2.3541 7.4804-7.9845 12.201-12.768-8.378-1.4975-16.207-2.6353-24.281-2.5955z"/>
+     <rect style="stroke-width:0;fill:currentColor" ry="2.0328" height="27.746" width="22.766" y="1017.7" x="60.201"/>
+    </g>
+   </g>
+  </symbol>
+
+  <symbol id="info" viewBox="0 0 41.667 41.667">
+   <g transform="translate(-37.035 -1004.6)">
+    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
+    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+   </g>
+  </symbol>
+
+  <symbol id="warning" viewBox="0 0 48.430474 41.646302">
+    <g transform="translate(-1.1273 -1010.2)">
+     <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+  </symbol>
+
+  <symbol id="menu" viewBox="0 0 50 50">
+     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="0" x="0"/>
+     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="20" x="0"/>
+     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="40" x="0"/>
+   </symbol>
+
+   <symbol id="link" viewBox="0 0 50 50">
+    <g transform="translate(0 -1002.4)">
+     <g transform="matrix(.095670 0 0 .095670 2.3233 1004.9)">
+      <g>
+       <path style="stroke-width:0;fill:currentColor" d="m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z"/>
+      </g>
+     </g>
+    </g>
+  </symbol>
+
+  <symbol id="doc" viewBox="0 0 35 45">
+   <g transform="translate(-147.53 -539.83)">
+    <path style="stroke:currentColor;stroke-width:2.4501;fill:none" d="m149.38 542.67v39.194h31.354v-39.194z"/>
+    <g style="stroke-width:25" transform="matrix(.098003 0 0 .098003 133.69 525.96)">
+     <path d="m220 252.36h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+     <path style="stroke:currentColor;stroke-width:25;fill:none" d="m220 409.95h200"/>
+     <path d="m220 488.74h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+     <path d="m220 331.15h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+    </g>
+   </g>
+ </symbol>
+
+ <symbol id="tick" viewBox="0 0 177.16535 177.16535">
+  <g transform="translate(0 -875.2)">
+   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="155" width="40" y="702.99" x="556.82"/>
+   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="40" width="90.404" y="817.99" x="506.42"/>
+  </g>
+ </symbol>
+</svg>
+
+    <div class="wrapper">
+      <header class="intro-and-nav" role="banner">
+  <div>
+    <div class="intro">
+      <a class="logo" href="/" aria-label="Kevin Davenport Engineering &amp; ML blog home page">
+        <img src="https://kldavenport.com/images/logo.svg" alt="">
+      </a>
+      <p class="library-desc">
+        
+      </p>
+    </div>
+    <nav id="patterns-nav" class="patterns" role="navigation">
+  <h2 class="vh">Main navigation</h2>
+  <button id="menu-button" aria-expanded="false">
+    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+      <use xlink:href="#menu"></use>
+    </svg>
+    Menu
+  </button>
+  
+  <ul id="patterns-list">
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/post/" aria-current="page">
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">Blog</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/about/" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">About</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/bike-travel/" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">Bike Travel</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/tags/" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">Tags</span>
+      </a>
+    </li>
+  
+    <li class="pattern">
+      
+      
+      
+      
+      <a href="/index.xml" >
+        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+          <use xlink:href="#bookmark"></use>
+        </svg>
+        <span class="text">RSS</span>
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+  </div>
+</header>
+      <div class="main-and-footer">
+        <div>
+          
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Using Entropy to Detect Randomly Generated Domains
+    </h1>
+    <div class="date">
+      
+      <strong aria-hidden="true">Publish date: </strong>Apr 1, 2014
+    </div>
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://kldavenport.com/tags/logistic-regression">logistic regression</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://kldavenport.com/tags/machine-learning">machine learning</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://kldavenport.com/tags/supervised-learning">supervised learning</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
+    
+      
+
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          <a href="#defining-entropy">
+            Defining Entropy
+          </a>
+        </li>
+      
+        <li>
+          <a href="#normal-domain-names">
+            “Normal” domain names
+          </a>
+        </li>
+      
+        <li>
+          <a href="#abnormal-domain-names">
+            “Abnormal” domain names
+          </a>
+        </li>
+      
+        <li>
+          <a href="#when-entropy-isnt-enough">
+            When Entropy isn’t enough
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
+
+    
+    
+
+<p>The intent of this post is to generally explore information entropy applied to a toy problem in network security. I&rsquo;ll outline a common problem then the basic concepts of entropy to then show a practical implementation using the the Kullback-Leibler divergence and the Python data stack.</p>
+
+<p>In network security the latest malware botnet threat paradigm utilizes peer-to-peer (P2P) communication methods and domain generating algorithms (DGAs). This method avoids any single point of failure and evades many countermeasures as the command and control framework is embedded in the botnets themselves instead of the outdated paradigm of relying on external servers.</p>
+
+<p>A potential method of minimizing the impact of these threats is imploying a profiler that detects attributes consistent with DGA and P2P.</p>
+
+<h2 id="defining-entropy">Defining Entropy</h2>
+
+<p>Entropy is the average amount or expectation of information gained for each possible event $X_i$ with possibility $P(X_i)$ that is represented by $log_2 (1/P(X<em>i))$ bits: $$H(X)=\sum</em>{j=1}^n P(X_j) \log_2 (1/P(X<em>j))=-\sum</em>{j=1}^n P(X_j) \log_2 P(X_j)$$
+where $H(X)$ is the entropy of events (i.e., random variable) $X$. Entropy is the amount of uncertainty or degree of surprise in an information system, thus low probability leads to high amount of information. Consider two events probabilities $p$ and $1-p$. The average information (per symbol or event) is:</p>
+
+<p>$$H(X)=-p log_2p-(1-p)log_2 (1-p)$$</p>
+
+<p>Entropy is at it&rsquo;s greatest when all events/outcomes are equally likely to occur.</p>
+
+<ul>
+<li><p>High entropy means $X$ is from a uniform distribution, where every outcome is as likely to occur</p></li>
+
+<li><p>Low entropy means $X$ is from varied distribution (with various peaks and valleys)</p></li>
+</ul>
+
+<p>Claude E. Shannon&rsquo;s outlined methods of estimating the entropy of English in his paper <a href ="https://www.princeton.edu/~wbialek/rome/refs/shannon_51.pdf"> &ldquo;Prediction and Entropy of Printed English&rdquo;</a>. He states that constraints imposed on the text of English language decrease in its overall entropy. Constraints such as &lsquo;q&rsquo; must always be followed by &lsquo;u and other rules such as &ldquo;i before e except after c&rdquo; are dependencies that make the English language more redundant. This redundancy is beneficial when discerning a signal from noise. If you read &ldquo;John is embroiled in a legal qxxxdary&rdquo; you could quickly infer &lsquo;uan&rsquo; as the missing letters. W</p>
+
+<p>For the toy problem outlined above, we can calculate the entropy of English using N-grams by statistically calculating the entropy of the next letter when the previous N - 1 letters are known. The entropy approaches H (entropy of English) as N increases.</p>
+
+<p><a href="https://www.youtube.com/watch?v=R4OlXb9aTvQ&amp;t">This video</a> is my favorite intuitive explanation of Information Entropy.</p>
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import seaborn as sns
+%pylab inline
+</code></pre>
+
+<p>As I build the model I&rsquo;ll start with a 2k row subset of Alexa&rsquo;s top 1,000,000 sites world wide. I will utilize the full dataset at the end.</p>
+
+<p>In bash:</p>
+
+<pre><code class="language-shell"># Create subset file
+head -n 2000 top1m.csv &gt; top2k.csv
+# If we wanted to add a header before hand
+sed -i 1i&quot;rank,url&quot; top2k.csv
+
+</code></pre>
+
+<p>OR use <em>nrows=20</em> parameter in read_csv</p>
+
+<pre><code class="language-python">alexadf = pd.read_csv('top2k.csv',names=['uri'],usecols= [1],header=None,encoding='utf-8')
+alexadf.head(2)
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uri</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   google.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> facebook.com</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 1 columns</p>
+</div>
+
+<p>In the name www.google.com, the TLD (top-level domain) is the dot(.) and the proceeding <em>com</em>. for complex domain-names using com.cn and .com.tw, the text after the last dot is the TLD. For this simple first pass model we won&rsquo;t weigh or penalize domain names belonging to less trusted countries/regions. We also won&rsquo;t consider cobinations of sub-domains.</p>
+
+<h2 id="normal-domain-names">&ldquo;Normal&rdquo; domain names</h2>
+
+<p>To start we&rsquo;ll need to extract all domain names before the first  &lsquo;.&rsquo; then drop NA and duplicates from the dataframe. We can check for duplicates by comparing the len() to nunique().</p>
+
+<pre><code class="language-python">alexadf['uri'] = alexadf['uri'].apply(lambda x: x[:x.find('.')]).astype(str)
+alexadf = alexadf.dropna()
+alexadf = alexadf.drop_duplicates()
+alexadf['label'] = 0 # Create label identifying values as nominal
+alexadf.head(2)
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uri</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   google</td>
+      <td> 0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> facebook</td>
+      <td> 0</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 2 columns</p>
+</div>
+
+<h2 id="abnormal-domain-names">&ldquo;Abnormal&rdquo; domain names</h2>
+
+<p>We can acquire a list of known suspicious domains here: <a href="https://isc.sans.edu/suspicious_domains.html">https://isc.sans.edu/suspicious_domains.html</a>
+to start we&rsquo;ll use the &lsquo;High Sensitivity Level&rsquo; file. These domain names are probably not as sophisticated as those created by something like <em>Kwyjibo</em> <a href="http://dl.acm.org/citation.cfm?id=1455471">http://dl.acm.org/citation.cfm?id=1455471</a> and more in line with domains generated by Conﬁcker and Kraken.</p>
+
+<pre><code class="language-python">malicious_domains = pd.read_csv('suspiciousdomains_High.txt',encoding='utf-8',skiprows=17,header=None,nrows=2200)
+malicious_domains.columns = ['uri']
+malicious_domains['uri'] = malicious_domains['uri'].apply(lambda x: x[:x.find('.')]).astype(str)
+
+malicious_domains.dropna()
+malicious_domains.drop_duplicates()
+
+malicious_domains['label'] = 1
+
+malicious_domains.head(2)
+#malicious_domains.info()
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uri</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 000007</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>  000cc</td>
+      <td> 1</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 2 columns</p>
+</div>
+
+<p>Concatenate normal and dga dataframes into one dataframe and create a label column:</p>
+
+<pre><code class="language-python">df = pd.concat([alexadf, malicious_domains], ignore_index=True)
+df['length'] = [len(x) for x in df['uri']]
+
+df.head(2)
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uri</th>
+      <th>label</th>
+      <th>length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   google</td>
+      <td> 0</td>
+      <td> 6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> facebook</td>
+      <td> 0</td>
+      <td> 8</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 3 columns</p>
+</div>
+
+<p>We&rsquo;ll implement Entropy defined as $H(X)=\sum_{j=1}^n P(X_j) \log_2 (1/P(X<em>j))=-\sum</em>{j=1}^n P(X_j) \log_2 P(X_j)$ (same as above) using the Counter dict subclass that counts hashable objects. It is an unordered collection where elements are stored as dict keys and corresponding counts are stored as dict values. Counts are allowed to be any int value including zero or negative counts. This class is similar to &lsquo;bags&rsquo; in C++.</p>
+
+<pre><code class="language-python">from collections import Counter
+# Remember mixed standard python functions and numpy functions are very slow 
+def calcEntropy(x):
+    p, lens = Counter(x), np.float(len(x))
+    return -np.sum( count/lens * np.log2(count/lens) for count in p.values())
+</code></pre>
+
+<p>Let&rsquo;s take a look at the top 5 entropy values:</p>
+
+<pre><code class="language-python">df['entropy'] = [calcEntropy(x) for x in df['uri']]
+df.sort('entropy', ascending = False)[:5]
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uri</th>
+      <th>label</th>
+      <th>length</th>
+      <th>entropy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2582</th>
+      <td> cg79wo20kl92doowfn01oqpo9mdieowv5tyj</td>
+      <td> 1</td>
+      <td> 36</td>
+      <td> 4.308271</td>
+    </tr>
+    <tr>
+      <th>3506</th>
+      <td>         hfoajof1ornmzmasvuqiowdpchap</td>
+      <td> 1</td>
+      <td> 28</td>
+      <td> 4.066109</td>
+    </tr>
+    <tr>
+      <th>2718</th>
+      <td>              crovniedelamjdusaboye73</td>
+      <td> 1</td>
+      <td> 23</td>
+      <td> 4.055958</td>
+    </tr>
+    <tr>
+      <th>2576</th>
+      <td>              cerovskiprijatnomnebi25</td>
+      <td> 1</td>
+      <td> 23</td>
+      <td> 3.969002</td>
+    </tr>
+    <tr>
+      <th>3278</th>
+      <td>                 gesticulez-rondkijkt</td>
+      <td> 1</td>
+      <td> 20</td>
+      <td> 3.921928</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 4 columns</p>
+</div>
+
+<p>We can see that the length and entropy of domains of label 1 (randomly generated) are higher.</p>
+
+<p>We can use the Pearson&rsquo;s coefficient to quantify the association between two variables that are assumed to be from a Gaussian distribution. The underlying distribution of length and entropy could be power or box-cox transformed to meet the assumption of normality, but knowing that the measures are linear (not monotonic) will be good enough for now. Let&rsquo;s try Spearman&rsquo;s coefficient just to compare the difference between coefficients.</p>
+
+<pre><code class="language-python">from scipy import stats
+#plt.rcParams['figure.figsize'] = 13, 7
+sns.set_context(rc={&quot;figure.figsize&quot;: (7, 5)})
+
+g = sns.JointGrid(df.length.astype(float), df.entropy.astype(float))
+g.plot(sns.regplot, sns.distplot, stats.spearmanr);
+
+print &quot;Pearson's r: {0}&quot;.format(stats.pearsonr(df.length.astype(float), df.entropy.astype(float)))
+</code></pre>
+
+<pre><code>Pearson's r: (0.80826357554406247, 0.0)
+</code></pre>
+
+<p><img src="output_20_1.png" alt="png" /></p>
+
+<p>We can compare the distribution of entropy for normal vs malcious domains via histograms and parametric statistics. More robust non-parametric methods can be used for the next model iteration.</p>
+
+<pre><code class="language-python">sns.set_context(rc={&quot;figure.figsize&quot;: (7, 5)})
+
+
+dfNominal = df[df['label']== 0]
+dfDGA = df[df['label']== 1]
+
+def shadedHist(df,col,bins):
+    df[col].hist(bins = bins, color = 'dodgerblue', alpha = .6, normed = False)
+    len_mean = df[col].mean()
+    len_std = df[col].std()
+    # mpl
+    plt.plot([len_mean, len_mean], [0,2500 ],'k-',lw=3,color = 'black',alpha = .4)
+    plt.plot([len_mean + (2 * len_std), len_mean + (2 * len_std)], [0, 2500], 'k-', lw=2, color = 'red', alpha = .4)
+    plt.axvspan(len_mean + (2 * len_std), max(df[col]), facecolor='r', alpha=0.3)
+    plt.title(col)
+</code></pre>
+
+<p>Red highlighting is of values over 2 standard deviations from the mean:</p>
+
+<p><strong>Nominal entropy distribution</strong></p>
+
+<pre><code class="language-python">sns.set_context(rc={&quot;figure.figsize&quot;: (7, 5)})
+
+shadedHist(df[df['label']== 0],'entropy',10) 
+
+nominal_parametric_upper = dfNominal['entropy'].mean() + \
+      2 * dfNominal['entropy'].std()
+    
+print nominal_parametric_upper
+</code></pre>
+
+<pre><code>3.66256510371
+</code></pre>
+
+<p><img src="output_25_1.png" alt="png" /></p>
+
+<p><strong>Malicious entropy distribution</strong></p>
+
+<pre><code class="language-python">sns.set_context(rc={&quot;figure.figsize&quot;: (7, 5)})
+
+shadedHist(dfDGA,'entropy',10)
+</code></pre>
+
+<p><img src="output_27_0.png" alt="png" /></p>
+
+<h2 id="when-entropy-isn-t-enough">When Entropy isn&rsquo;t enough</h2>
+
+<p>The differences based on entropy alone probably won&rsquo;t add enough distinguishing or predictive power in determining nominal vs DGA domains so let&rsquo;s try to engineer more features. Character n-grams avoid the use of tokenizers and are more language agnostic than word-grams, but they increase the dimensionality of the data.</p>
+
+<p>We can utilize scikit-learn&rsquo;s CountVectorizer to tokenize and count the word occurrences of the nominal Alexa domain name corpus of text. We will tune the following parameters:</p>
+
+<ul>
+<li><p>The <em>min_df</em> parameter will disregard words which appear less than <em>min_df</em> fraction of reviews.</p></li>
+
+<li><p>The <em>ngram_range</em> sets the lower and upper boundary on the range of n-values for the n-grams to be extracted.</p></li>
+</ul>
+
+<p>We calculated the upper entropy limit for Alexa values (label = 0) to be 3.66 bits so we&rsquo;ll set the range between 3 and 4.</p>
+
+<pre><code class="language-python">from sklearn.feature_extraction.text import CountVectorizer
+cv = CountVectorizer(analyzer='char', ngram_range=(3,4))
+
+cv_nominal = cv.fit_transform(df[df['label']== 0]['uri'])
+cv_all     = cv.fit_transform(df['uri'])
+
+feature_names = cv.get_feature_names()
+
+import operator
+sorted(cv.vocabulary_.iteritems(), key=operator.itemgetter(1), reverse= True)[0:5]
+</code></pre>
+
+<pre><code>[(u'zzzd', 22745),
+ (u'zzz', 22744),
+ (u'zzyt', 22743),
+ (u'zzy', 22742),
+ (u'zzpa', 22741)]
+</code></pre>
+
+<pre><code class="language-python">dfConcat = pd.concat([df.ix[:, 2:4], pd.DataFrame(cv_all.toarray())], join='outer', axis=1, ignore_index=False)
+dfConcat.head(3)
+# cv.vocabulary_
+# cv_nominal.toarray()
+# cv.get_feature_names()
+# cv.vocabulary_
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>length</th>
+      <th>entropy</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+      <th>17</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 6</td>
+      <td> 1.918296</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 8</td>
+      <td> 2.750000</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 7</td>
+      <td> 2.521641</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td> 0</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 22748 columns</p>
+</div>
+
+<pre><code class="language-python">X = dfConcat.values
+y = df.ix[:,1]
+print X[0:3]
+print ''
+print y[0:3]
+</code></pre>
+
+<pre><code>[[ 6.          1.91829583  0.         ...,  0.          0.          0.        ]
+ [ 8.          2.75        0.         ...,  0.          0.          0.        ]
+ [ 7.          2.52164064  0.         ...,  0.          0.          0.        ]]
+
+0    0
+1    0
+2    0
+Name: label, dtype: int64
+</code></pre>
+
+<p><strong>Dummy Classifier</strong></p>
+
+<p>Since we have a labeled dataset, we can conduct a sanity check by comparing any given selected estimator against the following rules of thumb for classfication:</p>
+
+<ul>
+<li>Stratified generates random predictions by respecting the training set’s class distribution</li>
+<li>Most_frequent always predicts the most frequent label in the training set</li>
+<li>Uniform generates predictions uniformly at random</li>
+</ul>
+
+<pre><code class="language-python">from sklearn.cross_validation import train_test_split 
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=22)
+</code></pre>
+
+<pre><code class="language-python">from sklearn.dummy import DummyClassifier
+
+for strategy in ['stratified', 'most_frequent', 'uniform']:
+    clf = DummyClassifier(strategy=strategy,random_state=None)
+    clf.fit(X_train, y_train)
+    print strategy + ': ' + str(clf.score(X_test, y_test))
+</code></pre>
+
+<pre><code>stratified: 0.50049652433
+most_frequent: 0.547169811321
+uniform: 0.513406156902
+</code></pre>
+
+<p><strong>Random Forest</strong></p>
+
+<p>We&rsquo;ll leave the parameter tuning via grid search, random search, or more <a href ="http://www.johnmyleswhite.com/notebook/2012/07/21/automatic-hyperparameter-tuning-methods/">advanced methods</a> to another time. For now let&rsquo;s see what an untuned Random Forest model yields.</p>
+
+<pre><code class="language-python">from sklearn.ensemble import RandomForestClassifier
+from sklearn.cross_validation import cross_val_score
+rf = RandomForestClassifier(n_jobs = -1)
+rf.fit(X_train, y_train)
+print 'RF' + ': ' + str(rf.score(X_test, y_test))
+    
+# scores = cross_val_score(clf, X, y, cv=2)
+# print scores
+</code></pre>
+
+<pre><code>RF: 0.636544190665
+</code></pre>
+
+<p>The results show that an un-tuned Random Forest classifier does better than the dummy classifier which is good considering the intentional near <sup>50</sup>&frasl;<sub>50</sub> split of nominal and DGA domains in our dataset.</p>
+
+<p><strong>Adding word-grams from an English dictionary</strong></p>
+
+<p>Let&rsquo;s utilize Unix&rsquo;s built in words list to create a dataframe of english words that we will then use to create character n-grams. We will then compare this result to the nominal and malicious domain names to compute how many real english n-grams exist in any given domain name. For example we&rsquo;d expect a domain name like</p>
+
+<pre><code class="language-shell">&gt; cat /usr/share/dict/words &gt; eng_words.txt
+
+# Check file size
+&gt; du -skh words.txt 
+2.4M
+
+#Count words in file
+&gt; wc -l eng_words.txt
+235886 eng_words.txt
+</code></pre>
+
+<pre><code class="language-python">dfEng = pd.read_csv('eng_words.txt', names=['word'],
+                    header=None, dtype={'word': np.str},
+                    encoding='utf-8')
+
+# Convert all words to lowercase to match domain name dataframes
+dfEng['word'] = dfEng['word'].map(lambda x: np.str(x).strip().lower())
+dfEng['word'].drop_duplicates(inplace=True)
+dfEng['word'].dropna(inplace=True)
+
+dfEng[10:15]
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>word</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>   aaronic</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td> aaronical</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>  aaronite</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td> aaronitic</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>      aaru</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 1 columns</p>
+</div>
+
+<pre><code class="language-python">from sklearn.feature_extraction.text import CountVectorizer
+
+cvEng = CountVectorizer(analyzer='char', ngram_range=(3,4))
+
+cvEngfeatures = cvEng.fit_transform(dfEng['word'])
+
+import operator
+print sorted(cvEng.vocabulary_.iteritems(), key=operator.itemgetter(1), reverse= True)[0:5]
+</code></pre>
+
+<pre><code>[(u'zzy', 65452), (u'zzwi', 65451), (u'zzw', 65450), (u'zzuo', 65449), (u'zzu', 65448)]
+</code></pre>
+
+<pre><code class="language-python">cvEngfeatures
+</code></pre>
+
+<pre><code>&lt;234371x65453 sparse matrix of type '&lt;type 'numpy.int64'&gt;'
+    with 3320438 stored elements in Compressed Sparse Column format&gt;
+</code></pre>
+
+<pre><code class="language-python">def engDictMatch(x):
+    return str(np.log10(cvEngfeatures.sum(axis=0).getA1()) * cvEng.transform([x]).T)
+print 'English dictionary match: ' + str(engDictMatch('yahoo')) 
+print 'English dictionary match: ' + str(engDictMatch('drudgereport')) 
+print 'English dictionary match: ' + str(engDictMatch('32tsdgseg')) 
+</code></pre>
+
+<pre><code>English dictionary match: [ 7.95517524]
+English dictionary match: [ 44.05504246]
+English dictionary match: [ 2.58433122]
+</code></pre>
+
+<p>Let&rsquo;s evaluate this match function using the original df (before countvectorizer and dfConcat steps):</p>
+
+<pre><code class="language-python">df['dictMatch'] = np.log10(cvEngfeatures.sum(axis=0).getA1()) * cvEng.transform(df['uri']).T 
+# df['dictMatch'] = df['uri'].apply(lambda x: engDictMatch(x))
+df.head(3)
+</code></pre>
+
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uri</th>
+      <th>label</th>
+      <th>length</th>
+      <th>entropy</th>
+      <th>dictMatch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>   google</td>
+      <td> 0</td>
+      <td> 6</td>
+      <td> 1.918296</td>
+      <td> 11.885770</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> facebook</td>
+      <td> 0</td>
+      <td> 8</td>
+      <td> 2.750000</td>
+      <td> 22.813645</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>  youtube</td>
+      <td> 0</td>
+      <td> 7</td>
+      <td> 2.521641</td>
+      <td> 16.048996</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 5 columns</p>
+</div>
+
+<p><strong>Second Pass</strong></p>
+
+<p>Let&rsquo;s examine what effect this additional feature has on our predictive accuracy by recreating our training and test set and rerunning classification:</p>
+
+<pre><code class="language-python">dfConcat2 = pd.concat([pd.DataFrame(df.ix[:,4]),dfConcat],join='outer', axis=1, ignore_index=False)
+X = dfConcat2.values
+y = df.ix[:,1]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=None)
+
+rf = RandomForestClassifier(n_jobs = -1)
+rf.fit(X_train, y_train)
+print 'RF' + ': ' + str(rf.score(X_test, y_test))
+</code></pre>
+
+<pre><code>RF: 0.722502482622
+</code></pre>
+
+<p>This new feature has added a small amount of power, but we could potentially gain much more by selecting our n-grams, thresholds, and other CountVectorizer parameters more intelligently. We could also create other features based on simple pattern matching concepts such as penalizing URIs if they contain more than 4 of the same character in a row.</p>
+
+<pre><code class="language-python">import re
+
+pattern = 'ZZZ'
+n = re.findall(pattern, string)
+# OR we can use str.count
+</code></pre>
+
+  </main>
+
+          <footer role="contentinfo">
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+  </div>
+  
+    Made w/ <a href="https://gohugo.io/">Hugo</a>. Deployed by <a href="https://app.netlify.com/">Netlify</a>.
+  
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://kldavenport.com/js/prism.js"></script>
+<script src="https://kldavenport.com/js/dom-scripts.js"></script>
+
+    
+  
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-34706513-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  
+
+  </body>
+</html>

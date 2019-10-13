@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/</link>
+    <description>Recent content in Blog on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Anchorage, Alaska</title>
+      <link>https://kldavenport.com/bike-travel/anchorage/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/bike-travel/anchorage/</guid>
+      <description>We were in Anchorage for a conference and did not miss the opportunity to explore local trails. We also had time to sneak in an easy hike with a huge payoff: Flattop Mountain. Whenever I visit a new city, I work to find a community of like minded folks that can plug me into the community. I ventured out to AMH a fantastic mountaineering shop with a selection of rare pro-gear.</description>
+    </item>
+    
+    <item>
+      <title>Betweenness Centrality</title>
+      <link>https://kldavenport.com/betweenness-centrality/</link>
+      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/betweenness-centrality/</guid>
+      <description>Lending Club is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.</description>
+    </item>
+    
+    <item>
+      <title>Computability, Complexity, &amp; Algorithms Part 1</title>
+      <link>https://kldavenport.com/complexity-computability-part1/</link>
+      <pubDate>Thu, 21 Feb 2019 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/complexity-computability-part1/</guid>
+      <description>In this series of posts we’ll cover important concepts from computability theory; techniques for designing efficient algorithms for combinatorial, algebraic, and (if I can learn enough about it), number-theoretic problems. It’ll serve as a compact way to familiarize ourselves with basic concepts such as NP-Completeness from computational complexity theory, through Python.
+The only pre-requisite is that you know what Big-O notation is conceptually, even if you don’t have a good intuition for why certain algorithms are one complexity versus another.</description>
+    </item>
+    
+    <item>
+      <title>Oaxaca, Mexico</title>
+      <link>https://kldavenport.com/bike-travel/oaxaca/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/bike-travel/oaxaca/</guid>
+      <description>About 80 of us from around the world headed east to the Oaxacan “Sierra Norte” located about 1.5 hours from Oaxaca city for the Transierra Norte. My photos do not do this beautiful state justice so take a look at pictures of last year&amp;rsquo;s event.
+Diego snaped me going down what I think was a stage on day 3.
+The trails were so spectacularly long and started at such a high altitude (+10k ft), that we&amp;rsquo;d see many distinct ecosystems and terrain over the course of one stage.</description>
+    </item>
+    
+    <item>
+      <title>Swiss, Italian, and French Alps</title>
+      <link>https://kldavenport.com/bike-travel/aosta/</link>
+      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/bike-travel/aosta/</guid>
+      <description>I just got back from Fluidride&amp;rsquo;s 2018 Alps trip where we rode the Swiss Italian, and French alps. Coming from the PNW I always find myself comparing destination trails to what I have in my backyard back home. You want awkward and rowdy: North Shore, Long shuttle-able diverse downhill: Tres Hombres, Legit freeride and fortitude challenging rock rolls: Squamish, skill park progression for all levels 30min from Seattle: Duthie Hill. The list goes on and on, the PNW has it all!</description>
+    </item>
+    
+    <item>
+      <title>Whistler, British Columbia</title>
+      <link>https://kldavenport.com/bike-travel/whistler/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/bike-travel/whistler/</guid>
+      <description>This shot of Christian on In Deep&amp;nbsp;captures the relentless tech of what is probably the hardest double-black technical trail on Whistler.
+Whistler is at the end of&amp;nbsp; a long steep windy road (BC-99) along the beautiful Howe Sound.&amp;nbsp; The drive makes you wonder how drivers navigate it safely in the snow. We rode about 80% of the trails offered over our 3 day stay in Creekside. If you care to avoid the commercial hustle and bustle of the main village, I highly recommend staying at Creekside, which offers non-congested lift access and a compliment of its own great trails.</description>
+    </item>
+    
+    <item>
+      <title>Mérida, Yucatán</title>
+      <link>https://kldavenport.com/bike-travel/merida/</link>
+      <pubDate>Sun, 02 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/bike-travel/merida/</guid>
+      <description>Monumento a la Patria at the End of Paseo Montejo
+Merida is a beautiful unique city with the styling and diversity that an average American tourist would expect out of cities in western Europe. One of my most memorable experiences during my weeks bushwhacking in the Yucatan was cruising along the beautiful wide tree-lined streets of Paseo de Montejo during the Sunday Bici-Ruta. The city closes a series of streets to all automobile traffic every Sunday.</description>
+    </item>
+    
+    <item>
+      <title>Topic Modeling Amazon Product Reviews</title>
+      <link>https://kldavenport.com/topic-modeling-amazon-reviews/</link>
+      <pubDate>Fri, 17 Mar 2017 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/topic-modeling-amazon-reviews/</guid>
+      <description>I found Professor Julian McAuley’s work at UCSD when I was searching for academic work identifying the ontology and utility of products on Amazon. Professor McAuley and his students have accomplished impressive work inferring networks of substitutable and complementary items. They constructed a browseable product graph of related products and discovered topics or ‘microcategories’ that are associated with product relationships to infer networks of substitutable and complementary products. Much of this work utilizes topic modeling, and as I’ve never applied it in academia or work, this blog will be a practical intro to Latent Dirichlet Allocation (LDA) through code.</description>
+    </item>
+    
+    <item>
+      <title>A Wild Aataset Has Appeared! Now What?</title>
+      <link>https://kldavenport.com/a-wild-dataset-has-appeared/</link>
+      <pubDate>Thu, 17 Mar 2016 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/a-wild-dataset-has-appeared/</guid>
+      <description>Where do we start when we stumble across a dataset we don’t know much about? Lets say one where we don’t necessarily understand the underlying generative process for some or all of the variables. Lets assume for now we’re sure there aren’t one off interventions or level shifts in the data, and we don’t know anything about the distribution of the features, trends, seasonality, model parameters, variance, etc.
+I tend to start with the simplest, most interpretable models first, regardless if the problem requires classification, regression, or causality modeling.</description>
+    </item>
+    
+    <item>
+      <title>Lending Club Data Analysis with Python</title>
+      <link>https://kldavenport.com/lending-club-python/</link>
+      <pubDate>Sat, 17 Oct 2015 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/lending-club-python/</guid>
+      <description>Lending Club is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.</description>
+    </item>
+    
+    <item>
+      <title>Pure Python Decision Trees</title>
+      <link>https://kldavenport.com/pure-python-decision-trees/</link>
+      <pubDate>Wed, 17 Jun 2015 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/pure-python-decision-trees/</guid>
+      <description>By now we all know what Random Forests is. We know about the great off-the-self performance, ease of tuning and parallelization, as well as it’s importance measures. It’s easy for engineers implementing RF to forget about it’s underpinnings. Unlike some of it’s more modern and advanced contemporaries, descision trees are easy to interpret. A neural net might obtain great results but it is difficult to work backwards from and explain to stake holders as the weights of the connections between two neurons have little meaning on their own.</description>
+    </item>
+    
+    <item>
+      <title>The 35 Hour Work Week with Python</title>
+      <link>https://kldavenport.com/the-35-hour-work-week/</link>
+      <pubDate>Sat, 17 Jan 2015 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/the-35-hour-work-week/</guid>
+      <description>I was prompted to write this post after reading the NYT’s In France, New Review of 35-Hour Workweek. For those not familiar with the 35-hour workweek, France adopted it in February 2000 with the suppport of then Prime Minister Lionel Jospin and the Minister of Labour Martine Aubry. Simply stated, the goal was to increase quality of life by reducing the work hour per worker ratio by requiring corporations to hire more workers to maintain the same work output as before.</description>
+    </item>
+    
+    <item>
+      <title>Understanding Logistic Regression Intuitively</title>
+      <link>https://kldavenport.com/logistic-regression-intuition/</link>
+      <pubDate>Fri, 17 Oct 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/logistic-regression-intuition/</guid>
+      <description>import numpy as np import matplotlib.pyplot as plt from scipy import optimize import pandas as pd import seaborn as sns from ggplot import * %matplotlib inline  Loading the data # Load training data data = pd.read_csv(&#39;ex2data2.txt&#39;,header=None, names = (&#39;x1&#39;,&#39;x2&#39;,&#39;y&#39;)) data.info()  &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; Int64Index: 118 entries, 0 to 117 Data columns (total 3 columns): x1 118 non-null float64 x2 118 non-null float64 y 118 non-null int64 dtypes: float64(2), int64(1) memory usage: 3.</description>
+    </item>
+    
+    <item>
+      <title>Time-Series Correlation and Regression</title>
+      <link>https://kldavenport.com/rolling-correlation-and-regression/</link>
+      <pubDate>Thu, 17 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/rolling-correlation-and-regression/</guid>
+      <description>This post will showcase a subset of Pandas’ time-series modeling capabilities. I’ll be using financial data to demonstrate the capabilities, however, the functions can be applied to any time-series data (application logs, netflow, bio-metrics, etc). The focus will be on moving or sliding window methods. These dynamic models account for time-dependent changes for any given state in a system whereas steady-state or static models are time-invariant as they naively calculate the system in equilibrium.</description>
+    </item>
+    
+    <item>
+      <title>Using Entropy to Detect Randomly Generated Domains</title>
+      <link>https://kldavenport.com/detecting-randomly-generated-domains/</link>
+      <pubDate>Tue, 01 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/detecting-randomly-generated-domains/</guid>
+      <description>The intent of this post is to generally explore information entropy applied to a toy problem in network security. I&amp;rsquo;ll outline a common problem then the basic concepts of entropy to then show a practical implementation using the the Kullback-Leibler divergence and the Python data stack.
+In network security the latest malware botnet threat paradigm utilizes peer-to-peer (P2P) communication methods and domain generating algorithms (DGAs). This method avoids any single point of failure and evades many countermeasures as the command and control framework is embedded in the botnets themselves instead of the outdated paradigm of relying on external servers.</description>
+    </item>
+    
+    <item>
+      <title>Model Free Reinforcement Learning Algorithms</title>
+      <link>https://kldavenport.com/model-free-reinforcement-learning-algorithms/</link>
+      <pubDate>Tue, 21 Jan 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/model-free-reinforcement-learning-algorithms/</guid>
+      <description>Reproducibility means different things to many people working the applied sciences space. The continuum appears to be sharing: 1. Code (.py, .cpp files) 2. Jupyter Notebook 3. Docker Container
+With #1 and #2 you are putting the onus on the recepient to have the same environment as you, maybe you point them to the same Anaconda distribution. With #3 you get an easy way to share your working environments including libraries and drivers.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://kldavenport.com/goisforlovers/</link>
+      <pubDate>Tue, 02 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Cupper Shortcodes</title>
+      <link>https://kldavenport.com/cupper-shortcodes/</link>
+      <pubDate>Tue, 12 Feb 2013 23:39:06 -0600</pubDate>
+      
+      <guid>https://kldavenport.com/cupper-shortcodes/</guid>
+      <description>blockquote {{% blockquote author=&amp;quot;Carl Jung&amp;quot; %}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity. {{% /blockquote %}}   Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://kldavenport.com/about/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://kldavenport.com/about/</guid>
+      <description>Github - Stack overflow - Strava - Linkedin
+I am a lover of all things conservation and mountain biking. As someone who was raised in the inner city – I am especially interested in youth enablement through sport. I serve organizations that introduce young people to the camaraderie and sense of identity that an outdoor sport like mountain biking offers in a world where technology competes for their time and attention.</description>
+    </item>
+    
+  </channel>
+</rss>

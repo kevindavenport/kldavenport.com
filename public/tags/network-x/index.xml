@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network X on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/tags/network-x/</link>
+    <description>Recent content in Network X on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Jul 2019 11:54:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/tags/network-x/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Betweenness Centrality</title>
+      <link>https://kldavenport.com/betweenness-centrality/</link>
+      <pubDate>Fri, 26 Jul 2019 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/betweenness-centrality/</guid>
+      <description>Lending Club is the first peer-to-peer lending company to register its offerings as securities with the Securities and Exchange Commission (SEC). Their operational statistics are public and available for download. It has been a while since I’ve posted an end to end solution blog post and would like to replicate the post with a bit more sophistication in Python with the latest dataset from lendinglub.com. In summary, let’s examine all the attributes Lending Club collects on users and how they influence the interest rates issued.</description>
+    </item>
+    
+  </channel>
+</rss>

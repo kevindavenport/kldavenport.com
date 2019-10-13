@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Supervised Learning on Kevin Davenport Engineering &amp; ML blog</title>
+    <link>https://kldavenport.com/tags/supervised-learning/</link>
+    <description>Recent content in Supervised Learning on Kevin Davenport Engineering &amp; ML blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Oct 2014 11:54:26 -0800</lastBuildDate>
+    
+	<atom:link href="https://kldavenport.com/tags/supervised-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understanding Logistic Regression Intuitively</title>
+      <link>https://kldavenport.com/logistic-regression-intuition/</link>
+      <pubDate>Fri, 17 Oct 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/logistic-regression-intuition/</guid>
+      <description>import numpy as np import matplotlib.pyplot as plt from scipy import optimize import pandas as pd import seaborn as sns from ggplot import * %matplotlib inline  Loading the data # Load training data data = pd.read_csv(&#39;ex2data2.txt&#39;,header=None, names = (&#39;x1&#39;,&#39;x2&#39;,&#39;y&#39;)) data.info()  &amp;lt;class &#39;pandas.core.frame.DataFrame&#39;&amp;gt; Int64Index: 118 entries, 0 to 117 Data columns (total 3 columns): x1 118 non-null float64 x2 118 non-null float64 y 118 non-null int64 dtypes: float64(2), int64(1) memory usage: 3.</description>
+    </item>
+    
+    <item>
+      <title>Using Entropy to Detect Randomly Generated Domains</title>
+      <link>https://kldavenport.com/detecting-randomly-generated-domains/</link>
+      <pubDate>Tue, 01 Apr 2014 11:54:26 -0800</pubDate>
+      
+      <guid>https://kldavenport.com/detecting-randomly-generated-domains/</guid>
+      <description>The intent of this post is to generally explore information entropy applied to a toy problem in network security. I&amp;rsquo;ll outline a common problem then the basic concepts of entropy to then show a practical implementation using the the Kullback-Leibler divergence and the Python data stack.
+In network security the latest malware botnet threat paradigm utilizes peer-to-peer (P2P) communication methods and domain generating algorithms (DGAs). This method avoids any single point of failure and evades many countermeasures as the command and control framework is embedded in the botnets themselves instead of the outdated paradigm of relying on external servers.</description>
+    </item>
+    
+  </channel>
+</rss>
